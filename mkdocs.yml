@@ -1,0 +1,4 @@
+site_name: Tiny Docs
+site_description: The Knowledge base for Tiny modders
+theme:
+  name: material
