@@ -2,6 +2,9 @@ site_name: Tiny Docs
 site_description: The Knowledge base for Tiny modders
 theme:
   name: material
+  palette:
+    primary: light green
+    accent: amber
   features:
     - content.code.annotate
 markdown_extensions:

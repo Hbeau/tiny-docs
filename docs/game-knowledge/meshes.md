@@ -13,8 +13,9 @@ This file contains properties to control whether a mesh should be **loaded** or 
 !!! info
     The **RON** format is a human-readable serialization format, making it easy to edit with any **text editor**. You can learn more about RON [here](https://github.com/ron-rs/ron).
 
+## Anatomy of a JSON mesh
 ### Structure of a Mesh File
- Meshes in **Tiny Glade** are stored as **JSON files**, each defining a 3D object. Below is the general structure of a mesh file
+ Meshes in **Tiny Glade** are stored as **JSON files**, each defining a 3D object. Below is the general structure of a mesh file. Json format is readable with any text editor, like vscode or notepad++.
 
 
 - **`attributes`**: An array that defines all attributes present in the file. These attributes are required and loaded by the game.
@@ -30,11 +31,9 @@ This file contains properties to control whether a mesh should be **loaded** or 
 
 1. The type of the buffer, it's often `int` or `float`
 2. The size of the vector, vector can sort data in sevral dimentions 
-3. The array of values
+3. The array of values 
 
-
-## Anatomy of a JSON mesh
-
+Here is an anatomy of a full json file.
 ``` yaml
 {"attributes": [
     "Vertex_Position", # (1)!
@@ -43,7 +42,7 @@ This file contains properties to control whether a mesh should be **loaded** or 
     "Vertex_UV" # (4)!
     ],
     "indices": { # (5)!
-        "type": [ # (6)!
+        "type": [
             "int",
             1
         ],
@@ -116,16 +115,16 @@ This file contains properties to control whether a mesh should be **loaded** or 
 3. `Vertex_Color` represents the RGB color of each vertex. It is a **Vector3** where each component is a float between **0 and 1**, corresponding to the red, green, and blue color channels.  
 4. `Vertex_UV` is the **2D representation** of the vertex, used by some meshes for texture mapping.  
    **Unfortunately, textures are not yet well understood.**  
-5. `Indices` define the faces of the mesh. Each number represents a vertex index, and they work in groups of three.  
-   Each group of three numbers forms a **triangle**. Unlike `Vertex_Position`, `Indices` are stored as an **array of integers**, not as a **Vector3**.  
+5. `Indices` define the faces of the mesh. Each number represents a vertex index,and they work in groups of three. Each group of three numbers forms a **triangle**. Unlike `Vertex_Position`, `Indices` are stored as an **array of integers**, not as a **Vector3**. ![faces](https://upload.wikimedia.org/wikipedia/commons/2/2d/Mesh_fv.jpg)
 
 ### About Vectors  
 Vectors in **Tiny Glade** follow the same coordinate system as **Unity**, where:  
 - **Y** goes **up**  
 - **X** goes **left**  
-
 <figure markdown="span">  
   ![axis order](axis-order.jpg){ width="500" }  
   <figcaption>Coordinate system comparison across different software</figcaption>  
 </figure>
 
+## Import into blender
+Reading lists of vectors in a json file can be very tought. We create a **[Blender](https://blender.org)** add on to allow import and export of json File. You can download the add on [here](https://github.com/Hbeau/TinyGlade-Blender-AddOn/blob/main/tiny_glade_json_io.py). learn more in the [Tiny Glade Blender AddOn](../modding-tools/tiny-glade-blender-add-on.md)
