@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -269,6 +269,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Game Structure
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -279,6 +291,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Game Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assets-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assets Folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifestjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manifest.json
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -421,6 +503,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Game Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assets-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assets Folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifestjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manifest.json
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -436,6 +577,38 @@
 
 
 <h1 id="game-structure">Game Structure</h1>
+<h2 id="how-it-works">How It Works</h2>
+<p>The game is developed in <strong>Rust</strong> and utilizes the <strong>Bevy</strong> engine (<a href="https://bevyengine.org/">Bevy Engine</a>). The music is managed with <strong>FMOD</strong> (<a href="https://www.fmod.com/docs/2.02/api/studio-api.html">FMOD Documentation</a>), which allows for <strong>evolutive</strong> and dynamic soundscapes.</p>
+<h2 id="game-files">Game Files</h2>
+<p>The main executable file is <strong><code>TinyGlade.exe</code></strong>. This binary contains the compiled Rust code where all the magic happens.</p>
+<h3 id="assets-folder"><code>Assets</code> Folder</h3>
+<p>The <code>Assets</code> folder contains all the necessary game resources, organized into subdirectories:</p>
+<ul>
+<li><strong><code>Audio/</code></strong>: This directory holds the game’s music and sound effects. The files are in an <strong>bank format</strong>, they are openable with the <em>fmod studio</em> free for small organization &lt; $200k.</li>
+<li><strong><code>Meshes/</code></strong>: This directory contains all the <strong>3D models</strong> used in the game. The assets are categorized into subfolders such as <code>Decorations/</code> and <code>Clutters/</code>, reflecting their in-game organization.</li>
+<li><strong><code>Data/</code></strong>: <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /> mining in progress <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /></li>
+<li><strong><code>Fonts/</code></strong>: Contains fonts used by the games stored in the ttf format</li>
+<li><strong><code>Glade/</code></strong>: settings for each <a href="">glades</a> : automn, flowery,olden,summer and winter.</li>
+<li><strong><code>Lang/</code></strong>: Contains translation for many language. easy editable yml files with all translation key and the corrsponding value for each languages</li>
+<li><strong><code>Luts/</code></strong>: <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /> mining in progress <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /></li>
+<li><strong><code>Prefabs/</code></strong>: <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /> mining in progress <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /></li>
+<li><strong><code>Starting-Build/</code></strong>: This forlder contains <a href="../save/">save files</a> that are loaded when you start a new glade</li>
+<li><strong><code>Tod/</code></strong>: acronym of <strong>time of the day</strong>, contain the light settings for every time settings</li>
+<li><strong><code>Ui/</code></strong>: <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /> mining in progress <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /></li>
+<li><strong><code>Colors.json</code></strong>: <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /> mining in progress <img alt="⛏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26cf.svg" title=":pick:" /></li>
+</ul>
+<h3 id="manifestjson"><code>Manifest.json</code></h3>
+<p>To ensure assets are not corrupted, a <strong><code>Manifest.json</code></strong> file is included. This file contains a list of all asset paths along with their corresponding <strong>checksums</strong>. If a file is modified and its checksum does not match, the game will <strong>crash on startup</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The game does <strong>not</strong> verify if <code>Manifest.json</code> itself is corrupted. You can manually remove entries from the manifest list or even clear the entire array to allow every assets modifications.  </p>
+</div>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://www.rust-lang.org/">Rust Programming Language</a></li>
+<li><a href="https://github.com/bevyengine/bevy">Bevy Engine GitHub</a></li>
+<li><a href="https://www.fmod.com/docs/2.02/api/studio-api.html">FMOD API Reference</a></li>
+</ul>
 
 
 
@@ -485,7 +658,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5090c770.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
     
   </body>
