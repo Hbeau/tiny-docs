@@ -25,12 +25,11 @@ The `Assets` folder contains all the necessary game resources, organized into su
 ### `Manifest.json`
 To ensure assets are not corrupted, a **`Manifest.json`** file is included. This file contains a list of all asset paths along with their corresponding **checksums**. If a file is modified and its checksum does not match, the game will **crash on startup**.
 
-!!! info
-  **Note:** The game does **not** verify if `Manifest.json` itself is corrupted. You can manually remove entries from the manifest list or even clear the entire array to allow every assets modifications.
+!!! info 
+    The game does **not** verify if `Manifest.json` itself is corrupted. You can manually remove entries from the manifest list or even clear the entire array to allow every assets modifications.  
+
 
 ## Additional Resources
 - [Rust Programming Language](https://www.rust-lang.org/)
 - [Bevy Engine GitHub](https://github.com/bevyengine/bevy)
 - [FMOD API Reference](https://www.fmod.com/docs/2.02/api/studio-api.html)
-
-This documentation provides an overview of the core structure and asset management system of *Tiny Glade*. Future updates may include details on **gameplay mechanics, modding support**, and **performance optimizations**.
