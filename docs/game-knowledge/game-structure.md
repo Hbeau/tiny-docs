@@ -16,7 +16,7 @@ The `Assets` folder contains all the necessary game resources, organized into su
 - **`Glade/`**: settings for each [glades]() : automn, flowery,olden,summer and winter.
 - **`Lang/`**: Contains translation for many language. easy editable yml files with all translation key and the corrsponding value for each languages
 - **`Luts/`**: :pick: mining in progress :pick:
-- **`Prefabs/`**: :pick: mining in progress :pick:
+- **`Prefabs/`**: It contains the different kind of tree. Not the meshes but a configuration in the ron format about how to load the tree
 - **`Starting-Build/`**: This forlder contains [save files](./save.md) that are loaded when you start a new glade
 - **`Tod/`**: acronym of **time of the day**, contain the light settings for every time settings
 - **`Ui/`**: :pick: mining in progress :pick:

@@ -3,12 +3,12 @@
 In **Tiny Glade**, meshes are the **3D representations** of all objects in the game, including decorations, clutter, and other elements.  
 
 ## Mesh Storage and Format  
-Meshes are stored as **JSON** files, containing arrays of points and various properties defining their shape and behavior.  
+Meshes are stored as **JSON** files, containing arrays of points and various attributes defining their shape and behavior.  
 These files can be found in the **`assets/meshes`** folder.
 
 ## Managing Meshes with RON  
 A special file, **`nani_meshes.ron`**, lists all available meshes and provides instructions on how they are loaded into the game.  
-This file contains properties to control whether a mesh should be **loaded** or **unloaded**.  
+This file contains attributes to control whether a mesh should be **loaded** or **unloaded**.  
 
 !!! info
     The **RON** format is a human-readable serialization format, making it easy to edit with any **text editor**. You can learn more about RON [here](https://github.com/ron-rs/ron).
@@ -125,6 +125,36 @@ Vectors in **Tiny Glade** follow the same coordinate system as **Unity**, where:
   ![axis order](axis-order.jpg){ width="500" }  
   <figcaption>Coordinate system comparison across different software</figcaption>  
 </figure>
+
+### Colors 
+Most of the items does not have textures, instead they store color of each vertex in an array. `[0.20000000298023224,0.20000000298023224,0.18039216101169586]`
+
+### Differents kinds of meshes
+The `nani_mesh.ron` register all meshes with their attributes ( if they have textures, or if glow for exemple). Meshes are grouped with others in subtypes with other meshes that share the sames attributes. 
+subsets also add or remove some attributes to their items(deprecated or useless). here is an exemple of the first subset `SolidVertexColor`. it's the most common and it regroup the basics decorators and clutters
+``` yaml
+subset: SolidVertexColor, #(1)!
+        attribs: (
+            remove: ["soft_normal", "Vertex_UV"], #(2)!
+            add: [
+                (name: "flags", ty: I32), #(3)!
+            ],
+        ),
+        meshes: [ #(4)
+            (name: "clutter/plant_pot_v1"),
+            ....
+        ]
+```
+
+1. Name of the subset
+2. Removed attribute, even if they are in the mesh json file, the value is ignored while loaded.
+3. added atributes: the usage is not known
+4. the list of files without the extention that are in the subset
+
+!!!Danger
+    It's important to keep the same attributes if you modify. if an attribute is missing while loading it, the game will crash.
+
+Some meshes like tree one are missing from this list because they are loaded in [prefabs](./prefab)
 
 ## Import into blender
 Reading lists of vectors in a json file can be very tought. We create a **[Blender](https://blender.org)** add on to allow import and export of json File. You can download the add on [here](https://github.com/Hbeau/TinyGlade-Blender-AddOn/blob/main/tiny_glade_json_io.py). learn more in the [Tiny Glade Blender AddOn](../modding-tools/tiny-glade-blender-add-on.md)
