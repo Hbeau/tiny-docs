@@ -653,19 +653,25 @@ Under the hood, their behavior and animation system are implemented in a very un
 <li><strong>Walking state</strong>: The sheep cycles through the 30 walking frames (<code>1.json</code> to <code>30.json</code>) in a loop, creating the illusion of movement.</li>
 <li><strong>Petting state</strong>: When the player pets a sheep, its mesh switches to <code>delighted.json</code>, showing a happy reaction.</li>
 </ul>
+<p>the original animation last 30 frame but you don't have to make yours last that long, you can loop through your frames to to create a shorter one. <strong>but it require the 30 files</strong></p>
 <h3 id="technical-constraints">🔧 Technical Constraints</h3>
 <p>For the animation to work properly, all meshes must meet <strong>strict structural requirements</strong>:</p>
 <ul>
 <li>They must have <strong>the exact same number of vertices</strong>.</li>
 <li>The vertices must be listed <strong>in the same order across all meshes</strong>.</li>
 </ul>
-<p>This is crucial because the animation system interpolates between vertex positions over time. If the vertex count or order differs between frames, the animation will break or cause visual artifacts.</p>
+<p>This is crucial because the animation system interpolates between vertex positions over time. If the vertex count or order differs between frames, the animation will break or cause visual artifacts.  </p>
+<p><img alt="wrong_vertex_order" src="../wrong_vertex_order.JPG" />  </p>
+<p>if the number of vertex is not even between models you will get the following error :<br />
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ERROR [tiny_glade::panic_reporter] [frame:0] PANIC: panicked at crates/country-core/src/startup/startup_sheep.rs:98:21:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>index out of bounds: the len is 860 but the index is 860
+</span></code></pre></div></p>
+<p>where the <code>860</code> is the length of your shortest mesh</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>If you're exporting or modifying sheep meshes in Blender:
 Make sure the export script does <strong>not reorder the vertex list</strong>.  </p>
 </div>
-<p><img alt="wrong_vertex_order" src="../wrong_vertex_order.JPG" /></p>
 <hr />
 <h3 id="version-notes">Version Notes</h3>
 <ul>
