@@ -7,6 +7,16 @@ theme:
     accent: amber
   features:
     - content.code.annotate
+nav:
+  - Home: index.md
+  - Game Knowledge:
+    - Assets Structure: game-knowledge/game-structure.md
+    - Meshes Rendering: game-knowledge/meshes.md
+    - Meshes :
+      - Sheeps: game-knowledge/meshes/sheeps.md
+    - Save System: game-knowledge/save.md
+  - Modding Tools:
+    - Tiny Glade Blender Add-On: modding-tools/tiny-glade-blender-add-on.md
 markdown_extensions:
   - admonition
   - pymdownx.highlight:
