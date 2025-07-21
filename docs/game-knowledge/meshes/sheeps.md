@@ -32,7 +32,7 @@ The sheep animation system works by **switching between mesh frames**:
 - **Walking state**: The sheep cycles through the 30 walking frames (`1.json` to `30.json`) in a loop, creating the illusion of movement.
 - **Petting state**: When the player pets a sheep, its mesh switches to `delighted.json`, showing a happy reaction.
 
-the original animation last 30 frame but you don't have to make yours last that long, you can loop through your frames to to create a shorter one. **but it require the 30 files**
+the original animation last 30 frame but you don't have to make yours last that long, you can loop through your frames to create a shorter one. **but it require the 30 files to work properly** if not, the game crash at startup.
 
 ### 🔧 Technical Constraints
 
