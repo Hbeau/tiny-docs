@@ -9,12 +9,6 @@ Tiny Glade includes many [assets](../game-knowledge/game-structure.md) that you 
 
 Asset packs **replace existing game files** and are loaded when the game starts.
 
-!!! warning
-    **Asset files are protected!**  
-    The game uses a file called `build-info/manifest.json` to check if assets have been changed.  
-    If you modify any asset, the game will refuse to start unless you update or clear the manifest.  
-    See below for [how to clean the Manifest file](#manifest-file).
-
 ---
 
 ## Installation Methods
@@ -25,32 +19,9 @@ There are **two ways** to install custom assets:
 
 ## Manual Installation
 
-### 1. Clearing the Manifest File
-
-The `manifest.json` file stores a **hash** for every game file, preventing unauthorized changes or file corruption.  
-A typical entry looks like:
-
-```json
-[
-  "default_settings.ron",
-  "db6f245b9ab982c11191a4bbd7288267d879b530b5b052ca8ed8b5299b16ee91"
-]
-```
-
-**Good news:**  
-The manifest does **not** check itself, so you can safely edit or clear it.  
-To allow modding, simply **remove all entries** from the manifest.  
-Here’s a blank manifest you can use (or [download it here](./manifest.json){:download="manifest"}):  
-
-```json
-{
-  "version": 1,
-  "files": []
-}
-```
-
-This disables the file check, letting you use your custom assets.  
-*(But beware: the game may crash if your assets are broken!)*
+1. **Extract** the new asset pack (usually a ZIP file).
+2. **Copy** the new `assets` folder into your game directory, replacing existing files if prompted.
+3. **Start the game** and enjoy your new content!
 
 !!! danger
     **Modding is fun but risky!**  
@@ -61,14 +32,6 @@ This disables the file check, letting you use your custom assets.
 
 ---
 
-### 2. Installing the Asset Pack
-
-1. **Extract** the new asset pack (usually a ZIP file).
-2. **Copy** the new `assets` folder into your game directory, replacing existing files if prompted.
-3. **Start the game** and enjoy your new content!
-
----
-
 ## Automatic Installation
 
 ![Whiterun application](./Whiterun.jpg)
@@ -76,7 +39,7 @@ You can use the **Whiterun** tool to automate the process:
 
 1. **Download Whiterun** from [GitHub](https://github.com/Hbeau/Whiterun/releases/tag/V1.2)  
    *(Requires [Java 24](https://adoptium.net/temurin/releases/?version=24) to run)*
-2. **Open Whiterun** and patch your game (this will clear the manifest for you).
+2. **Open Whiterun** and patch your game.
 3. Click **"Add asset pack"** and move your ZIP file (do not extract) into the folder.
 4. The pack should appear in the list.  
    Click on it, then click **"Install"**.
