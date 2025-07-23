@@ -17,7 +17,7 @@ The sheep's 3D models (meshes) are located in the `meshes/sheep_animation` folde
 !!! info  
     The `1.json` mesh is also used for the **idle** animation.
 
-Each mesh file contains a standard set of [meshes attributes](../meshes):  
+Each mesh file contains a standard set of [meshes attributes](../meshes.md):  
 - `Vertex_Position`: the 3D coordinates of each vertex  
 - `Vertex_Normal`: the direction each vertex is facing 
 - `Vertex_Color`: the color of each vertex
