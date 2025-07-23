@@ -69,7 +69,7 @@ This disables the file check, letting you use your custom assets.
 
 ---
 
-## Automatic Installation (Recommended for Beginners)
+## Automatic Installation
 
 ![Whiterun application](./Whiterun.jpg)
 You can use the **Whiterun** tool to automate the process:
