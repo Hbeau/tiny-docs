@@ -17,7 +17,7 @@ nav:
     - Save System: game-knowledge/save.md
   - Modding Tools:
     - How to Install packs: modding-tools/installing-packs.md
-    - Tiny Glade Blender Add-On: modding-tools/tiny-glade-blender-add-on.md
+    - Mesh Editing: modding-tools/mesh_editing.md
 markdown_extensions:
   - admonition
   - pymdownx.highlight:
