@@ -71,4 +71,4 @@ To preview your changes locally, you need Python and pip installed:
 
 ---
 
-✨*Happy modding!*✨
+✨ *Happy modding!* ✨
