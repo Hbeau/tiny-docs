@@ -8,13 +8,13 @@ The **Tiny Glade Blender Add-On** lets you easily **import and export** [Tiny Gl
 
 ### **Requirements:**  
 - [Blender](https://www.blender.org/download/) (any recent version)
-- The add-on Python script: [Download from GitHub](https://github.com/Hbeau/TinyGlade-Blender-AddOn/blob/main/tiny_glade_json_io.py)
+- The add-on Python script: [Download from GitHub](https://github.com/Hbeau/TinyGlade-Blender-AddOn/releases)
 
 ### **To install:**  
 1. Open Blender.  
 2. Go to **Edit → Preferences → Add-ons**.  
 3. Click the **arrow-down button** at the top right, then select **Install from Disk**.  
-4. Choose the downloaded `tiny_glade_json_io.py` file and click **Install from Disk** (bottom right).  
+4. Choose the downloaded `tiny_glade_blender_addon.zip` file and click **Install from Disk** (bottom right).  
 5. **Enable** the add-on by checking its box in the add-ons list.  
 
 ---
