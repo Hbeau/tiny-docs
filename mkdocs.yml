@@ -16,7 +16,7 @@ nav:
       - Sheeps: game-knowledge/meshes/sheeps.md
     - Save System: game-knowledge/save.md
   - Modding Tools:
-    - How to Install packs: modding-tools/installing-packs.md
+    - How to edit assets: modding-tools/editing-assets.md
     - Mesh Editing: modding-tools/mesh_editing.md
 markdown_extensions:
   - admonition

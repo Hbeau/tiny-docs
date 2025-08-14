@@ -10,7 +10,7 @@ To join and engage with fellow modders, you can access the Discord server throug
 
 ## Game Knowledge
 
-We gather all our knowlege about the game mecanics below we dig so far  
+We gather all our knowledge about the game mechanics below we dig so far  
 - the overall [Game Structure](game-knowledge/game-structure.md)  
 - The display of the [Meshes](game-knowledge/meshes.md)  
 - The way how [Glade are saved](game-knowledge/save.md)  
