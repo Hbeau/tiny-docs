@@ -3,7 +3,7 @@
 Sheep are the most iconic and adorable creatures in *Tiny Glade*. They wander peacefully around your buildings and love being petted.  
 Under the hood, their behavior and animation system are implemented in a very unique way.
 
-![Sheeps](./two_sheep_in_a_meadow.jpg)
+![Sheep](./two_sheep_in_a_meadow.jpg)
 
 ---
 
