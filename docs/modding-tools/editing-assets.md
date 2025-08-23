@@ -49,8 +49,10 @@ _The path should lead to something like :
 Then click on the **Patch Game** button to patch the game
 3. Click **"Add asset pack"** to open the folder where asset packs are stored. You can download packs from the [Reddit community](https://www.reddit.com/r/TinyGladeMods/) or the Discord **#Mods-list** channel.
 4. The pack should appear in Whiterun automatically.  
-   Click on it, then click **"Install"**.
+   Click on it, then click **"Install"**.  
+   ![install-pack](install.jpg)
 5. **Start the game** and enjoy!
+
 # Creating a New Asset Pack
 
 To **create your own asset pack**, follow these steps:
