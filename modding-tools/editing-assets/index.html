@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../meshes/sheeps/">
+        <link rel="prev" href="../../game-knowledge/save/">
       
       
-        <link rel="next" href="../../modding-tools/editing-assets/">
+        <link rel="next" href="../mesh_editing/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Save System - Tiny Docs</title>
+        <title>How to edit assets - Tiny Docs</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#how-to-edit-game-assets" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Save System
+              How to edit assets
             
           </span>
         </div>
@@ -214,19 +219,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -241,7 +244,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Game Knowledge
@@ -255,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../game-structure/" class="md-nav__link">
+      <a href="../../game-knowledge/game-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -277,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../meshes/" class="md-nav__link">
+      <a href="../../game-knowledge/meshes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../meshes/sheeps/" class="md-nav__link">
+      <a href="../../game-knowledge/meshes/sheeps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,17 +365,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../game-knowledge/save/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +378,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -399,17 +394,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -424,7 +421,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Modding Tools
@@ -435,10 +432,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../modding-tools/editing-assets/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -448,6 +454,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -460,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../modding-tools/mesh_editing/" class="md-nav__link">
+      <a href="../mesh_editing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,6 +506,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -514,9 +523,113 @@
 
 
 
-  <h1>Save System</h1>
-
-
+<h1 id="how-to-edit-game-assets">How to edit game Assets</h1>
+<p>Tiny Glade includes many <a href="../../game-knowledge/game-structure/">assets</a> and <strong>Compiled assets (Aka Textures)</strong> that you can modify to change the look and feel of your game.<br />
+<strong>Asset packs</strong> are collections of these modified files gather in an zip file, letting you customize things like:<br />
+- Decorations and clutter<br />
+- Entities (sheep, ducks, etc.)<br />
+- Trees<br />
+- Seasonal settings<br />
+- Banners</p>
+<p>Asset packs <strong>replace existing game files</strong> and are loaded when the game starts.</p>
+<hr />
+<h1 id="installation-methods">Installation Methods</h1>
+<p>There are <strong>two ways</strong> to install custom assets:<br />
+- <strong>Manual installation</strong><br />
+- <strong>Automatic installation</strong> (using Whiterun)</p>
+<h2 id="manual-installation">Manual Installation</h2>
+<ol>
+<li><strong>Extract</strong> the new asset pack (usually a ZIP file).</li>
+<li><strong>Copy</strong> the new <code>assets</code> folder into your game directory, replacing existing files if prompted.</li>
+<li><strong>Start the game</strong> and enjoy your new content!</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Modding is fun but risky!</strong><br />
+- Always <strong>back up your saves</strong> before experimenting.<br />
+- If the game asks to send a crash report, say <strong>no</strong> to avoid annoying the dev teams (but you can share logs on Discord’s #modding channel, click on details, open <code>log.txt</code> and scroll to the bottom).<br />
+<img alt="crash report" src="../crash-report.jpg" style="height:400px;display:block;margin:auto" />
+- The manifest is reset after every game update, so check it regularly!</p>
+</div>
+<hr />
+<h2 id="automatic-installation">Automatic Installation</h2>
+<p><img alt="Whiterun application" src="../Whiterun.jpg" />
+You can use the <strong>Whiterun</strong> tool to automate the process:</p>
+<ol>
+<li><strong>Download Whiterun</strong> from <a href="https://github.com/Hbeau/Whiterun/releases/tag/V1.2">GitHub</a><br />
+<em>(Requires <a href="https://adoptium.net/temurin/releases/?version=24">Java 24</a> to run)</em></li>
+<li><strong>Open Whiterun</strong> by double-clicking on the <code>jar</code> file (make sure you launch it with the right version of java)</li>
+<li><strong>Patch your game</strong><br />
+ The game should be automaticly located and the path is shown in the text field. verify the path or edit it with the <strong>Browse...</strong> button<br />
+<em>The path should lead to something like : <br />
+<code>C:\program Files (x86)\Steam\SteamLibrary\steamapps\common\Tiny Glade\</code></em>
+<img alt="whiterun-config" src="../Whiterun-config.jpg" />
+Then click on the <strong>Patch Game</strong> button to patch the game</li>
+<li>Click <strong>"Add asset pack"</strong> to open the folder where asset packs are stored. You can download packs from the <a href="https://www.reddit.com/r/TinyGladeMods/">Reddit community</a> or the Discord <strong>#Mods-list</strong> channel.</li>
+<li>The pack should appear in Whiterun automatically.<br />
+   Click on it, then click <strong>"Install"</strong>.<br />
+<img alt="install-pack" src="../install.jpg" /></li>
+<li><strong>Start the game</strong> and enjoy!</li>
+</ol>
+<h1 id="creating-a-new-asset-pack">Creating a New Asset Pack</h1>
+<p>To <strong>create your own asset pack</strong>, follow these steps:</p>
+<ol>
+<li><strong>Set up your pack folder</strong>  </li>
+<li>Create an <strong>empty directory</strong> for your pack.</li>
+<li>
+<p>Inside this folder, <strong>replicate the structure</strong> of the original game files for any assets you want to modify.</p>
+<ul>
+<li><em>Example:</em> To edit the anvil clutter, place your modified file at <code>assets/meshes/clutter/anvil.json</code>.</li>
+<li><em>For compiled assets:</em> To change the flag texture, place your file at <code>compiled-assets/textures/flag_patterns.texture</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Add a manifest file</strong>  </p>
+</li>
+<li>At the <strong>root of your pack folder</strong>, create a file named <code>manifest.json</code> to describe your pack.</li>
+<li>Example manifest:
+     <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My very own assets&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Change things that look very cool!&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;authors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Name 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Name 2&quot;</span><span class="p">]</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</span></code></pre></div></li>
+<li>
+<p><strong>This file is required</strong> for your pack to be recognized by the game or Whiterun.</p>
+</li>
+<li>
+<p><strong>Include a thumbnail</strong>  </p>
+</li>
+<li>Add a <strong>128x128 JPG image</strong> named <code>thumbnail.jpg</code> at the root of your pack folder.</li>
+<li>
+<p>This image will represent your pack in mod managers.</p>
+</li>
+<li>
+<p><strong>Package your pack</strong>  </p>
+</li>
+<li><strong>Zip the entire folder</strong> (including all files, manifest, and thumbnail).</li>
+<li>Your asset pack is now ready to share or install!</li>
+</ol>
+<blockquote>
+<p><strong>Tip:</strong><br />
+If you want to skip creating the manifest and zipping manually, you can use the <strong>Whiterun</strong> tool’s built-in pack creation form for a streamlined process.</p>
+</blockquote>
+<hr />
+<h2 id="recovering-from-problems">Recovering from Problems</h2>
+<p>If you want to <strong>restore the default game</strong> or if something breaks.<br />
+1. go one the Tiny Glade steam page in your library<br />
+2. click on the cog at the right and in the dropdown menu click on properties<br />
+<img alt="properties" src="../steam_properties.jpg" style="height:300px;display:block;margin:auto" /><br />
+3. On the pop-up go to "installed files" menu and click on "verify integrity"
+<img alt="verify integrity" src="../verify_integity.jpg" style="height:300px;display:block;margin:auto" /></p>
+<hr />
+<h2 id="need-help">Need Help?</h2>
+<ul>
+<li>Join the <strong>Tiny Glade Discord</strong> (accessible inside the game) for help and sharing mods.</li>
+<li>You can find mods in the <a href="https://www.reddit.com/r/TinyGladeMods/">Reddit community</a>.</li>
+</ul>
+<hr />
+<p><em>Happy tinkering!</em></p>
 
 
 
