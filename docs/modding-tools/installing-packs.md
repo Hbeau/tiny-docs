@@ -39,9 +39,15 @@ You can use the **Whiterun** tool to automate the process:
 
 1. **Download Whiterun** from [GitHub](https://github.com/Hbeau/Whiterun/releases/tag/V1.2)  
    *(Requires [Java 24](https://adoptium.net/temurin/releases/?version=24) to run)*
-2. **Open Whiterun** and patch your game.
-3. Click **"Add asset pack"** and move your ZIP file (do not extract) into the folder.
-4. The pack should appear in the list.  
+2. **Open Whiterun** by double-clicking on the `jar` file (make sure you launch it with the right version of java)
+3. **Patch your game**  
+ The game should be automaticly located and the path is shown in the text field. verify the path or edit it with the **Browse...** button  
+_The path should lead to something like :   
+`C:\program Files (x86)\Steam\SteamLibrary\steamapps\common\Tiny Glade\`_
+![whiterun-config](Whiterun-config.jpg)
+Then click on the **Patch Game** button to patch the game
+3. Click **"Add asset pack"** to open the folder where asset packs are stored. You can download packs from the [Reddit community](https://www.reddit.com/r/TinyGladeMods/) or the Discord **#Mods-list** channel.
+4. The pack should appear in Whiterun automatically.  
    Click on it, then click **"Install"**.
 5. **Start the game** and enjoy!
 
