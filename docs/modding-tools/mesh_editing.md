@@ -38,11 +38,66 @@ Your object will appear in Blender as **"Tiny Glade Object"**.
 ---
 
 ## Modeling Tips
+### Triangulate faces
+**Why:** Tiny Glade expects *triangles*. Quads or n-gons can cause incorrect color mapping and rendering artifacts. 
+**How:**     
+- Enter *Edit Mode*: select the whole mesh (`A`).  
+- Press `Ctrl+T` or use `Mesh → Faces → Triangulate Faces` to convert faces to triangles.  
+- For a non‑destructive workflow, add a *Triangulate* modifier (Object `Properties → Modifiers → Add Modifier → Triangulate`) — then **apply it before export**.  
 
-- **Triangulate faces**: Use Blender’s edit mode to convert all faces to triangles. This is required for proper color handling.
-- **Apply vertex colors**: Use **Vertex Paint** mode after triangulating.
-- **Check normals**: Make sure all normals point outward.
-- **Paint every vertex**: If any vertex is missing a color, the game will crash.
+!!! info
+    If you use modifiers, **apply them in Object Mode before exporting** so the exported geometry matches the viewport.
+
+### **Apply vertex colors**
+**Why:** The game reads per-vertex color data. Paint on the final (triangulated) mesh so colors align with exported vertices.  
+**How:**  
+- With the object selected, switch to *Vertex Paint* mode.  
+- Create or select a vertex color layer (`Object Data Properties → Color Attributes / Vertex Colors`).  
+- Use the Paint tools or *Bucket Fill* to paint the mesh. Use Fill for a quick base color.  
+- Verify the color layer is active and saved before export.  
+
+![color convert](./color_convert.png)
+
+!!! info
+    In recent Blender versions vertex colors are stored as *color attributes*. Ensure the attribute name is preserved in export.
+
+### **Check normals**
+**Why:** Normals determine surface orientation for lighting; inverted normals produce dark or transparent appearances in‑game.  
+**How:**  
+- In *Edit Mode*, select all faces (`A`) and use `Mesh → Normals → Recalculate Outside` (`Shift+N`).  
+- To flip specific faces, select them and use `Mesh → Normals → Flip`.  
+- Visualize normals via *Overlays → Face Orientation* or enable normal display in *Viewport Overlays*.  
+
+**Notes:**
+- If your shader relies on split normals, either clear custom split normals (`Mesh → Normals → Clear Custom Split Normals Data`) or export proper normal data.
+
+### **Split edges (preserve sharp edges)**
+**Why:** Sharp edges often require duplicated vertices so normals and vertex colors don’t interpolate across a hard seam.  
+**How:**  
+- Option 1 (modifier): In *Object Mode* add an *Edge Split* modifier (`Modifiers → Add Modifier → Edge Split`), choose *Sharp Edges* or angle threshold, then **Apply**.  
+- Option 2 (mark sharp): In *Edit Mode*, select edges → `Edge → Mark Sharp`, then enable *Auto Smooth* (`Object Data Properties → Normals → Auto Smooth`) or apply *Edge Split*.  
+<div markdown="span" style="display:flex">
+<figure style="margin:0" markdown="span">
+  ![No Edge Split](./exemple_no_edge_split.JPG){style="max-width:320px;height:auto;display:block}
+</figure>
+<figure style="margin:0" markdown="span">
+  ![Edge Split](./exemple_edge_split.JPG){style="max-width:320px;height:auto;display:block}
+</figure>
+</div>
+<p style="text-align:center;font-style:italic;margin-top:0.5rem;font-size:0.7rem">Edge Split preserves hard seams so normals and vertex colors don't interpolate across the edge — prevents color bleeding and shading artifacts.</p>
+
+### **Paint every vertex**
+**Why:** *Missing vertex color data will crash the game.* Every exported vertex must have a color value.  
+**How:**  
+- After triangulating and splitting edges, enter *Vertex Paint* and do a complete fill (Bucket Fill) to set a color for every vertex.  
+- Verify vertex count and color layer length match: open the object’s *Color Attributes* and confirm the layer exists and covers the mesh.  
+- As a final check, export a test JSON and inspect the color arrays or re-import to verify no vertex is uncolored.  
+
+### **Quick checklist before exporting**
+- Mesh is **triangulated** and modifiers **applied**.  
+- Vertex color layer **exists** and is **active**.  
+- Normals face outward (`Shift+N`) or flipped where appropriate.  
+- Edge Split or equivalent **applied** for sharp seams.  
 
 !!! danger
     **Missing vertex colors will crash the game!**  
