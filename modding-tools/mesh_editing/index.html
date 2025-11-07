@@ -566,6 +566,66 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Modeling Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triangulate-faces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triangulate faces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply-vertex-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply vertex colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-normals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check normals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-edges-preserve-sharp-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split edges (preserve sharp edges)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paint-every-vertex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paint every vertex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-checklist-before-exporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick checklist before exporting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -734,6 +794,66 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Modeling Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triangulate-faces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triangulate faces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply-vertex-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply vertex colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-normals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check normals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-edges-preserve-sharp-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split edges (preserve sharp edges)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paint-every-vertex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paint every vertex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-checklist-before-exporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick checklist before exporting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -847,11 +967,63 @@
 <p><em>Other mesh attributes are not currently supported.</em></p>
 <hr />
 <h2 id="modeling-tips">Modeling Tips</h2>
+<h3 id="triangulate-faces">Triangulate faces</h3>
+<p><strong>Why:</strong> Tiny Glade expects <em>triangles</em>. Quads or n-gons can cause incorrect color mapping and rendering artifacts. 
+<strong>How:</strong>   <br />
+- Enter <em>Edit Mode</em>: select the whole mesh (<code>A</code>).<br />
+- Press <code>Ctrl+T</code> or use <code>Mesh → Faces → Triangulate Faces</code> to convert faces to triangles.<br />
+- For a non‑destructive workflow, add a <em>Triangulate</em> modifier (Object <code>Properties → Modifiers → Add Modifier → Triangulate</code>) — then <strong>apply it before export</strong>.  </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If you use modifiers, <strong>apply them in Object Mode before exporting</strong> so the exported geometry matches the viewport.</p>
+</div>
+<h3 id="apply-vertex-colors"><strong>Apply vertex colors</strong></h3>
+<p><strong>Why:</strong> The game reads per-vertex color data. Paint on the final (triangulated) mesh so colors align with exported vertices.<br />
+<strong>How:</strong><br />
+- With the object selected, switch to <em>Vertex Paint</em> mode.<br />
+- Create or select a vertex color layer (<code>Object Data Properties → Color Attributes / Vertex Colors</code>).<br />
+- Use the Paint tools or <em>Bucket Fill</em> to paint the mesh. Use Fill for a quick base color.<br />
+- Verify the color layer is active and saved before export.  </p>
+<p><img alt="color convert" src="../color_convert.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In recent Blender versions vertex colors are stored as <em>color attributes</em>. Ensure the attribute name is preserved in export.</p>
+</div>
+<h3 id="check-normals"><strong>Check normals</strong></h3>
+<p><strong>Why:</strong> Normals determine surface orientation for lighting; inverted normals produce dark or transparent appearances in‑game.<br />
+<strong>How:</strong><br />
+- In <em>Edit Mode</em>, select all faces (<code>A</code>) and use <code>Mesh → Normals → Recalculate Outside</code> (<code>Shift+N</code>).<br />
+- To flip specific faces, select them and use <code>Mesh → Normals → Flip</code>.<br />
+- Visualize normals via <em>Overlays → Face Orientation</em> or enable normal display in <em>Viewport Overlays</em>.  </p>
+<p><strong>Notes:</strong>
+- If your shader relies on split normals, either clear custom split normals (<code>Mesh → Normals → Clear Custom Split Normals Data</code>) or export proper normal data.</p>
+<h3 id="split-edges-preserve-sharp-edges"><strong>Split edges (preserve sharp edges)</strong></h3>
+<p><strong>Why:</strong> Sharp edges often require duplicated vertices so normals and vertex colors don’t interpolate across a hard seam.<br />
+<strong>How:</strong><br />
+- Option 1 (modifier): In <em>Object Mode</em> add an <em>Edge Split</em> modifier (<code>Modifiers → Add Modifier → Edge Split</code>), choose <em>Sharp Edges</em> or angle threshold, then <strong>Apply</strong>.<br />
+- Option 2 (mark sharp): In <em>Edit Mode</em>, select edges → <code>Edge → Mark Sharp</code>, then enable <em>Auto Smooth</em> (<code>Object Data Properties → Normals → Auto Smooth</code>) or apply <em>Edge Split</em>.  </p>
+<div style="display:flex">
+<figure style="margin:0">
+  <img alt="No Edge Split" src="../exemple_no_edge_split.JPG" style="&quot;max-width:320px;height:auto;display:block" />
+</figure>
+<figure style="margin:0">
+  <img alt="Edge Split" src="../exemple_edge_split.JPG" style="&quot;max-width:320px;height:auto;display:block" />
+</figure>
+</div>
+<p style="text-align:center;font-style:italic;margin-top:0.5rem;font-size:0.7rem">Edge Split preserves hard seams so normals and vertex colors don't interpolate across the edge — prevents color bleeding and shading artifacts.</p>
+
+<h3 id="paint-every-vertex"><strong>Paint every vertex</strong></h3>
+<p><strong>Why:</strong> <em>Missing vertex color data will crash the game.</em> Every exported vertex must have a color value.<br />
+<strong>How:</strong><br />
+- After triangulating and splitting edges, enter <em>Vertex Paint</em> and do a complete fill (Bucket Fill) to set a color for every vertex.<br />
+- Verify vertex count and color layer length match: open the object’s <em>Color Attributes</em> and confirm the layer exists and covers the mesh.<br />
+- As a final check, export a test JSON and inspect the color arrays or re-import to verify no vertex is uncolored.  </p>
+<h3 id="quick-checklist-before-exporting"><strong>Quick checklist before exporting</strong></h3>
 <ul>
-<li><strong>Triangulate faces</strong>: Use Blender’s edit mode to convert all faces to triangles. This is required for proper color handling.</li>
-<li><strong>Apply vertex colors</strong>: Use <strong>Vertex Paint</strong> mode after triangulating.</li>
-<li><strong>Check normals</strong>: Make sure all normals point outward.</li>
-<li><strong>Paint every vertex</strong>: If any vertex is missing a color, the game will crash.</li>
+<li>Mesh is <strong>triangulated</strong> and modifiers <strong>applied</strong>.  </li>
+<li>Vertex color layer <strong>exists</strong> and is <strong>active</strong>.  </li>
+<li>Normals face outward (<code>Shift+N</code>) or flipped where appropriate.  </li>
+<li>Edge Split or equivalent <strong>applied</strong> for sharp seams.  </li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
