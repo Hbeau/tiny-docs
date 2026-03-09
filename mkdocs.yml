@@ -12,8 +12,9 @@ nav:
   - Game Knowledge:
     - Assets Structure: game-knowledge/game-structure.md
     - Meshes Rendering: game-knowledge/meshes.md
-    - Meshes :
-      - Sheeps: game-knowledge/meshes/sheeps.md
+    - Objects :
+      - Sheeps: game-knowledge/objects/sheeps.md
+      - Trees: game-knowledge/objects/trees.md
     - Save System: game-knowledge/save.md
   - Modding Tools:
     - How to edit assets: modding-tools/editing-assets.md
