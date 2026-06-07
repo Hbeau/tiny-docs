@@ -202,4 +202,4 @@ For example:
 *Tip: I use the [ColorHexa](https://www.colorhexa.com/) tool to easily convert between hex codes and RGB percentage. And [srgb-linear](https://apps.colorjs.io/picker/srgb-linear) to get the Linear sRGB equivalent for more fidelity with in Game color*
 
 ## Import into blender
-Reading lists of vectors in a json file can be very tought. We create a **[Blender](https://blender.org)** add on to allow import and export of json File. You can download the add on [here](https://github.com/Hbeau/TinyGlade-Blender-AddOn/blob/main/tiny_glade_json_io.py). learn more in the [Tiny Glade Blender AddOn](../modding-tools/tiny-glade-blender-add-on.md)
+Reading lists of vectors in a json file can be very tought. We create a **[Blender](https://blender.org)** add on to allow import and export of json File. You can download the add-on [here](https://github.com/Hbeau/TinyGlade-Blender-AddOn/releases). learn more in the [Tiny Glade Blender AddOn](../modding-tools/mesh-edit-with-blender.md)

@@ -1,7 +1,7 @@
 # Game Structure
 
 ## How It Works
-The game is developed in **Rust** and utilizes the **Bevy** engine ([Bevy Engine](https://bevyengine.org/)). The music is managed with **FMOD** ([FMOD Documentation](https://www.fmod.com/docs/2.02/api/studio-api.html)), which allows for **evolutive** and dynamic soundscapes.
+The game is developed in **Rust** and utilizes the **Bevy** engine ([Bevy Engine](https://bevyengine.org/)). The music and sound is managed with **FMOD** ([FMOD Documentation](https://www.fmod.com/docs/2.02/api/studio-api.html)), which allows for **evolutive** and dynamic soundscapes.
 
 ## Game Files
 The main executable file is **`TinyGlade.exe`**. This binary contains the compiled Rust code where all the magic happens.
@@ -9,13 +9,13 @@ The main executable file is **`TinyGlade.exe`**. This binary contains the compil
 ### `Assets` Folder
 The `Assets` folder contains all the necessary game resources, organized into subdirectories:
 
-- **`Audio/`**: This directory holds the game’s music and sound effects. The files are in an **bank format**, they are openable with the _fmod studio_ free for small organization < $200k.
+- **`Audio/`**: This directory holds the game’s music and sound effects. The files are in an **bank format**. This is a special format created by FMOD. they are [editable](./sound-editing.md) with an open source software
 - **`Meshes/`**: This directory contains all the **3D models** used in the game. The assets are categorized into subfolders such as `Decorations/` and `Clutters/`, reflecting their in-game organization.
 - **`Data/`**: :pick: mining in progress :pick:
 - **`Fonts/`**: Contains fonts used by the games stored in the ttf format
 - **`Glade/`**: settings for each [glades]() : automn, flowery,olden,summer and winter.
 - **`Lang/`**: Contains translation for many language. easy editable yml files with all translation key and the corrsponding value for each languages
-- **`Luts/`**: :pick: mining in progress :pick:
+- **`Luts/`**: Contains list of LUTs (Look-Up Table) to map one set of colors to another, used in the photo mod. they can be [modified](lut-editing.md)
 - **`Prefabs/`**: It contains the different kind of tree. Not the meshes but a configuration in the ron format about how to load the tree
 - **`Starting-Build/`**: This forlder contains [save files](./save.md) that are loaded when you start a new glade
 - **`Tod/`**: acronym of **time of the day**, contain the light settings for every time settings

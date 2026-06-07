@@ -17,8 +17,8 @@ nav:
       - Trees: game-knowledge/objects/trees.md
     - Save System: game-knowledge/save.md
   - Modding Tools:
-    - How to edit assets: modding-tools/editing-assets.md
-    - Mesh Editing: modding-tools/mesh_editing.md
+    - How to install assets: modding-tools/installing-assets.md
+    - Mesh Editing: modding-tools/mesh-edit-with-blender.md
 markdown_extensions:
   - admonition
   - pymdownx.highlight:

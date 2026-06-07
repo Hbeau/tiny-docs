@@ -19,5 +19,5 @@ We gather all our knowledge about the game mechanics below we dig so far
 
 Explore our guides and utilities to help you customize Tiny Glade:
 
-- [Mesh Editing with Blender Add-On](modding-tools/mesh_editing.md) — Learn how to import, edit, and export meshes for Tiny Glade
+- [Mesh Editing with Blender Add-On](modding-tools/mesh-edit-with-blender.md) — Learn how to import, edit, and export meshes for Tiny Glade
 
