@@ -9,15 +9,15 @@ The main executable file is **`TinyGlade.exe`**. This binary contains the compil
 ### `Assets` Folder
 The `Assets` folder contains all the necessary game resources, organized into subdirectories:
 
-- **`Audio/`**: This directory holds the game’s music and sound effects. The files are in an **bank format**. This is a special format created by FMOD. they are [editable](./sound-editing.md) with an open source software
+- **`Audio/`**: This directory holds the game’s music and sound effects. The files are in an **bank format**. This is a special format created by FMOD. they are [editable](../modding-tools/sound-editing.md) with an open source software
 - **`Meshes/`**: This directory contains all the **3D models** used in the game. The assets are categorized into subfolders such as `Decorations/` and `Clutters/`, reflecting their in-game organization.
 - **`Data/`**: :pick: mining in progress :pick:
 - **`Fonts/`**: Contains fonts used by the games stored in the ttf format
 - **`Glade/`**: settings for each [glades]() : automn, flowery,olden,summer and winter.
 - **`Lang/`**: Contains translation for many language. easy editable yml files with all translation key and the corrsponding value for each languages
-- **`Luts/`**: Contains list of LUTs (Look-Up Table) to map one set of colors to another, used in the photo mod. they can be [modified](lut-editing.md)
+- **`Luts/`**: Contains list of LUTs (Look-Up Table) to map one set of colors to another, used in the photo mod. they can be [modified](../modding-tools/lut-editing.md)
 - **`Prefabs/`**: It contains the different kind of tree. Not the meshes but a configuration in the ron format about how to load the tree
-- **`Starting-Build/`**: This forlder contains [save files](./save.md) that are loaded when you start a new glade
+- **`Starting-Build/`**: This forlder contains [save files](./starterbuilds.md) that are loaded when you start a new glade
 - **`Tod/`**: acronym of **time of the day**, contain the light settings for every time settings
 - **`Ui/`**: :pick: mining in progress :pick:
 - **`Colors.json`**: :pick: mining in progress :pick:

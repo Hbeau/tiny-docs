@@ -15,10 +15,13 @@ nav:
     - Objects :
       - Sheeps: game-knowledge/objects/sheeps.md
       - Trees: game-knowledge/objects/trees.md
-    - Save System: game-knowledge/save.md
+    - Savegames: game-knowledge/save.md
+    - Starter Builds: game-knowledge/starterbuilds.md
   - Modding Tools:
     - How to install assets: modding-tools/installing-assets.md
+    - Making your own LUT: modding-tools/lut-editing.md
     - Mesh Editing: modding-tools/mesh-edit-with-blender.md
+    - Sound Editing: modding-tools/sound-editing.md
 markdown_extensions:
   - admonition
   - pymdownx.highlight:
