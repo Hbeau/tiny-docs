@@ -31,7 +31,7 @@ For editing the audio i use [Audacity](https://www.audacityteam.org/) or you can
 - Run the Tool and press *extract*
 - The tool will now create multiple folders:
   
-    **fsb** - This Folder has the extracted archives (*.fsb) where the audio files are stored in. **You dont need this**
+    **fsb** - This Folder has the extracted archives (*.fsb) where the audio files are stored in.
 
     **wav** - where you find the converted Audio files **This is our Main folder to work with**
 

@@ -11,7 +11,7 @@ All starter builds are normal savegames. So you can undo and redo them just as a
 
 ## Where do i find them?
 
-Alls starter builds can be found in **`...team\steamapps\common\Tiny Glade\assets\starting-builds`**
+Alls starter builds can be found in **`...Steam\steamapps\common\Tiny Glade\assets\starting-builds`**
 
 ## Can i change them?
 
@@ -30,5 +30,5 @@ You can delete all saves except one, then all your glades will start with this o
 You can use any glade you want. Your own savegames or downloaded savegames.
 
 !!! tipp
-    Keep the naming convention of the starting builds folder f.e. "01 [NAME]" so when the game updates and redownloads all default saves, you know which is added by yourself
+    I advise to keep the naming convention of the starting builds f.e. "01 [NAME]" so when the game updates and re-downloads all default saves, you know which is added by yourself
 
