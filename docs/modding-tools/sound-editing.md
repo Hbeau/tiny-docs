@@ -21,19 +21,19 @@ For editing the audio i use [Audacity](https://www.audacityteam.org/) or you can
 - Download Fmod Bank Tools
 - Unpack it anywhere and keep the folder structure.
 - go to **`...\Tiny Glade\assets\audio\Desktop`**
-- make a Backup of all **`[NAME].assets.bank`** you want to edit.
+- make a Backup of all **[NAME].assets.bank** you want to edit.
 !!! info
      we only ever need to edit the asset.bank files, all other files do not contain any audio
 
 - Copy the files you want to edit into the **`Banks\`** folder inside the Fmod-Bank-Tools folder
 !!! info
     The same sound effect, can be in multiple *.asset.Bank files. f.e. the sheep sound is in 3 different files and all of them need to be changed to have the sound work consistantly.
-- Run the Tool and press `extract`
+- Run the Tool and press *extract*
 - The tool will now create multiple folders:
   
-    **fsb** - This Folder has the extracted archives (*.fsb) where the audio files are stored in. *`You dont need this`
+    **fsb** - This Folder has the extracted archives (*.fsb) where the audio files are stored in. **You dont need this**
 
-    **wav** - where you find the converted Audio files **`This is our Main folder to work with`**
+    **wav** - where you find the converted Audio files **This is our Main folder to work with**
 
 - you can now open and edit the *.wav files with a editor of your choice
 
@@ -48,9 +48,9 @@ For editing the audio i use [Audacity](https://www.audacityteam.org/) or you can
 !!! tipp
     I always open the original *.wav first. Then load my sound into a second channel so that i can fit my sound to the original channel. After im done, i delete the original channel and save the file overwriting the original.
 
-- After you are done with all files you want to edit. Open the Fmod-Banks-Tool and press on `rebuild`
+- After you are done with all files you want to edit. Open the Fmod-Banks-Tool and press on *rebuild*
 - The tool creates another folder called **`Build\`** where it puts your new files.
-- Copy the new **`[NAME].assets.bank`** file you just build into the games folder and overwrite the original.
+- Copy the new **[NAME].assets.bank** file you just build into the games folder and overwrite the original.
 
 
 

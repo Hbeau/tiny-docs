@@ -23,7 +23,8 @@ The Saves are made out of basically 2 parts. The History and the Snapshots.
 
 Since these Snapshots accumulate over time, the savegame folder gets bigger and bigger over time.
 
-*tl;dr:* **`To reduce the filesize you can delete all snapshots, except the very last one. So you will still instantly load your glade, but the folder size will not grow infinitely big`**
+!!! quote "*tl;dr:*"
+     To reduce the filesize you can delete all snapshots, except the very last one. So you will still instantly load your glade, but the folder size will not grow infinitely big
 
 
 ## Can i install other peoples savegames?
@@ -35,4 +36,4 @@ You can also download savegames from the community made website [Open-Glade](htt
 !!! info
     Open-Glade is not affiliated with pounce-light and purely community made. Be aware of things you download and never download files you are not sure are safe to use. And never download anything without a proper anti-virus on your PC.
 
-    For questions regarding Open-Glade, they have a seperate discord you can find on the webside.
+    For questions regarding Open-Glade, they have a seperate discord you can find on their webside.

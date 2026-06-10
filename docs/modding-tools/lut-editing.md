@@ -19,7 +19,7 @@ LUT's are saved in **`...Steam\steamapps\common\Tiny Glade\assets\luts`**
 
 ## Making your Own!
 
-For this i will concentrate on making LUT's with [DaVinci Resolve](https://www.blackmagicdesign.com/de/products/davinciresolve) since it has a fully free version and is very easy to use, specially when it comes to Color grading.
+For this i will concentrate on making LUT's with [DaVinci Resolve](https://www.blackmagicdesign.com/de/products/davinciresolve) since it has a fully free version, is very easy to use and very good color controls.
 
 !!! info
     There are certainly other Tools that can create LUT's, there are also multiple Online Tools, but i dont have any experience with them. And the results of the few i tried where... not exactly what i was after.
@@ -69,7 +69,7 @@ For this, i want to make a Sin-City and Akira Kurosawa inspired, black and white
   ![06](6generate.jpg){ width="800" }   
 </figure>
 
-*`Lets open up TG and see how it went`*
+**Lets open up TG and see how it went**
 
 - there we have our LUT in the selector
 <figure markdown="span">  
