@@ -39,11 +39,10 @@ expects some unusual vertex attributes:
 
 ![Tree colour encoding](UV_map.png)
 
-* **`appear_pos`** – In my comprehention, it's thethe center point of each quad used for billboard rendering.
+* **`appear_pos`** – In my comprehention, it's the center point of each quad used for billboard rendering.
     The game uses this to place the billboards correctly when drawing distant trees.
-  (Tom, if you can add a better description here, please do.)
 * **`prim_center`** – similar to `appear_pos` but tied to the original vertex position.
-  It isn’t well‑documented; feel free to write a few sentences explaining its purpose.
+  It isn’t well‑documented
 
 ## Blender Add‑on (v1.3+)
 
