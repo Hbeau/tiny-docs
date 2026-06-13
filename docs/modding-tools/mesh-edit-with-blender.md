@@ -114,7 +114,7 @@ _by default, the export tool will split edges for you, but if you want to do it 
 
 !!! tip
     It's also possible to bake a texture to vertex color using "Bake". it requires a mesh with many vertices to have a good result. se in the exemple below, the texture is baked to vertex color on a 21k vertices mesh. the result is not perfect but it works well in game. 
-    ![baked texture](baked_texture.jpg) { width=320px }
+    ![baked texture](baked_texture.jpg)
     [here is a tutorial on how to bake a texture to vertex color](https://blender.stackexchange.com/questions/271985/how-to-bake-texture-to-vertex-colors)
 
 
@@ -123,7 +123,7 @@ _by default, the export tool will split edges for you, but if you want to do it 
 
 ## Video Tutorial
 
-Watch this step-by-step video by JSK for a full walkthrough:
+Some times ago, JSK made a video tutorial on how to use the blender addon, it is a bit old but still relevant.
 
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0-j9FaxsRGE?si=H5yMLdaPEZ3J2YAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

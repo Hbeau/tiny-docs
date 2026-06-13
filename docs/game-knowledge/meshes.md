@@ -1,6 +1,7 @@
 # Mesh Rendering
 
-In **Tiny Glade**, meshes are the **3D representations** of all objects in the game, including decorations, clutter, and other elements.  
+In **Tiny Glade**, meshes are the **3D models** of the most objects in the game, including decorations, clutter, and other elements (like plants, trees, stones, etc...). 
+Exception made for buildings, roofs, and some other objects that are calculated procedurally.
 
 ## Mesh Storage and Format  
 Meshes are stored as **JSON** files, containing arrays of points and various attributes defining their shape and behavior.  
