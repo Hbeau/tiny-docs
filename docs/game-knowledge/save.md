@@ -1,39 +1,47 @@
 # Savegames
 
-## Infos about Game Saves
+## Information About Game Saves
 
-All information regarding how savegames work, when the game saves, what it saves and where you find your savegames can be found in the [Developers Guide](https://pouncelight.games/tiny-glade/troubleshooting/saves/)
+Information about how Tiny Glade savegames work, when the game saves, what data is stored, and where save files are located can be found in the [Developer Guide](https://pouncelight.games/tiny-glade/troubleshooting/saves/).
 
-## Why do my Savegames use a lot of Space?
+## Why Do My Savegames Use So Much Space?
 
-To understand why the savegames use a lot of space we need to understand what uses this space and what main parts are the saves comprised of.
+To understand why a save folder can become large, it helps to know what the save is made of.
 
-The Saves are made out of basically 2 parts. The History and the Snapshots.
+A Tiny Glade save is primarily made up of two components:
 
+### `history.json`
 
-**History.json**
+This file contains the history of edits made to the glade and represents the underlying save data.
 
-- This file contains all of your edits and progress. This is your actual savegame
+### Snapshots
 
+Snapshots are created during manual and automatic saves. They allow the game to load the current state of a glade quickly.
 
-**Snapshots**
+Without a suitable snapshot, the game may need to reconstruct the glade from `history.json` by replaying the recorded edits. This is similar to rebuilding the glade from a timelapse and can take increasingly longer as a build becomes larger and more complex.
 
-- Snapshots generate each manual and automatic save. The snapshots help the Game to instantly load your build upon opening the glade.
-- Without the snapshots, the game would read the history.json and make each edit. basically rebuilding the glade a new. Like a Timelapse. With the snapshots the game knows the current state and can build it instantly. This way you dont need to sit through the rebuilding process every time, which gets more and more time consuming the bigger the build gets.
+Snapshots provide a cached state of the build, allowing the game to load it much more quickly.
 
-Since these Snapshots accumulate over time, the savegame folder gets bigger and bigger over time. So you need to delete the unnecessary ones yourself.
+Because snapshots accumulate over time, the save folder can gradually increase in size.
 
-!!! quote "*tl;dr:*"
-     To reduce the filesize you can delete all snapshots, except the very last one. So you will still instantly load your glade, but the folder size will not grow infinitely big
+!!! tip "Reducing save size"
 
+    If you want to reduce the size of a save folder, older snapshots can be removed while keeping the most recent snapshot.
 
-## Can i install other peoples savegames?
+    Keeping the latest snapshot allows the current glade state to load quickly while reducing the amount of space used by older snapshots.
 
-Yes, you can get savegames from friends and family and copy them to your savegame folder, to use them for yourself.
+    Make a backup of the save folder before deleting files manually.
 
-You can also download savegames from the community made website [Open-Glade](https://www.open-glade.com) or Upload your own for others to use.
+## Can I Install Other People's Savegames?
 
-!!! info
-    Open-Glade is not affiliated with pounce-light and purely community made. Be aware of things you download and never download files you are not sure are safe to use. And never download anything without a proper anti-virus on your PC.
+Yes. Savegames can be copied from another player into your Tiny Glade save folder and then opened in the game.
 
-    For questions regarding Open-Glade, they have a seperate discord you can find on their webside.
+Community-created saves can also be downloaded from sites such as [Open-Glade](https://www.open-glade.com), where users can share their own builds.
+
+!!! info "About Open-Glade"
+
+    Open-Glade is a community-run website and is not affiliated with Pounce Light.
+
+    As with any community-hosted download, only download files from sources you trust and scan unfamiliar files before opening them.
+
+    Questions about Open-Glade should be directed to the community channels linked on the Open-Glade website.

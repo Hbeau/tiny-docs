@@ -1,67 +1,90 @@
 # Mesh Rendering
 
-In **Tiny Glade**, meshes are the **3D models** of the most objects in the game, including decorations, clutter, and other elements (like plants, trees, stones, etc...). 
-Exception made for buildings, roofs, and some other objects that are calculated procedurally.
+In **Tiny Glade**, meshes are the **3D models** that make up many built-in assets in the game, including decorations, clutter, plants, trees, stones, and other objects.
 
-## Mesh Storage and Format  
-Meshes are stored as **JSON** files, containing arrays of points and various attributes defining their shape and behavior.  
-These files can be found in the **`assets/meshes`** folder.
+Exceptions include buildings, roofs, and some other objects that are generated procedurally.
 
-## Managing Meshes with RON  
-A special file, **`nani_meshes.ron`**, lists all available meshes and provides instructions on how they are loaded into the game.  
-This file contains attributes to control whether a mesh should be **loaded** or **unloaded**.  
+## Mesh Storage and Format
+
+Many of Tiny Glade's built-in meshes are stored as **JSON** files containing arrays of points and other attributes that define their shape and behaviour. These meshes can be found in the `assets/meshes` folder.
+
+!!! info "Built-in meshes vs modded clutter"
+
+    This page describes Tiny Glade's **built-in JSON mesh format** and the vertex-colour system used by many existing clutter and decoration meshes.
+
+    Tiny Glade's newer **clutter modding support** uses `.glb` files for additional clutter items distributed through the Steam Workshop. These modded clutter meshes use a different asset and material workflow, so the JSON structure, `nani_meshes.ron` registration, and vertex-colour details described on this page do **not** apply to clutter added through the official modding system.
+
+    This page remains relevant when inspecting or replacing the game's existing JSON meshes.
+
+## Managing Meshes with RON
+
+A special file, `nani_meshes.ron`, lists available meshes and provides instructions for how they are loaded into the game.
+
+This file contains attributes that control whether a mesh should be **loaded** or **unloaded**.
 
 !!! info
-    The **RON** format is a human-readable serialization format, making it easy to edit with any **text editor**. You can learn more about RON [here](https://github.com/ron-rs/ron).
-### Differents kinds of meshes
-The `nani_mesh.ron` register all meshes with their attributes ( if they have textures, or if glow for exemple). Meshes are grouped with others in subtypes with other meshes that share the sames attributes. 
-subsets also add or remove some attributes to their items(deprecated or useless). here is an exemple of the first subset `SolidVertexColor`. it's the most common and it regroup the basics decorators and clutters
-``` yaml
-subset: SolidVertexColor, #(1)!
-        attribs: (
-            remove: ["soft_normal", "Vertex_UV"], #(2)!
-            add: [
-                (name: "flags", ty: I32), #(3)!
-            ],
-        ),
-        meshes: [ #(4)
-            (name: "clutter/plant_pot_v1"),
-            ....
-        ]
+    **RON** is a human-readable serialization format that can be edited using any text editor. You can learn more about RON [here](https://github.com/ron-rs/ron).
+
+### Different Kinds of Meshes
+
+The `nani_meshes.ron` file registers meshes together with their attributes. Meshes are grouped into subsets containing meshes that share the same attribute structure.
+
+Subsets can also add or remove attributes. Below is an example of the `SolidVertexColor` subset, one of the most common subsets used for basic decorations and clutter.
+
+```yaml
+subset: SolidVertexColor, # (1)!
+
+    attribs: (
+        remove: ["soft_normal", "Vertex_UV"], # (2)!
+        add: [
+            (name: "flags", ty: I32), # (3)!
+        ],
+    ),
+
+    meshes: [ # (4)!
+        (name: "clutter/plant_pot_v1"),
+        ...
+    ]
 ```
 
-1. Name of the subset
-2. Removed attribute, even if they are in the mesh json file, the value is ignored while loaded.
-3. added atributes: the usage is not known
-4. the list of files without the extention that are in the subset
+1. The name of the subset.
+2. Attributes that are removed. Even if these attributes are present in the mesh JSON file, their values are ignored when the mesh is loaded.
+3. Attributes added to the mesh. The purpose of some added attributes is not yet fully understood.
+4. The list of mesh files in the subset, without their file extensions.
 
-!!!Danger
-    It's important to keep the same attributes if you modify. if an attribute is missing while loading it, the game will crash.
+!!! danger
+    When modifying a mesh, make sure it retains all required attributes. If a required attribute is missing when the game loads the mesh, the game may crash.
 
-Some meshes like tree one are missing from this list because they are loaded in [prefabs](./prefab)
+Some meshes, such as tree meshes, are not included in this list because they are loaded through **prefabs**.
 
+## Anatomy of a JSON Mesh
 
-## Anatomy of a JSON mesh
 ### Structure of a Mesh File
- Meshes in **Tiny Glade** are stored as **JSON files**, each defining a 3D object. Below is the general structure of a mesh file. Json format is readable with any text editor, like vscode or notepad++.
 
+Built-in meshes using Tiny Glade's legacy/internal mesh format are stored as **JSON files**, with each file defining a 3D object.
 
-- **`attributes`**: An array that defines all attributes present in the file. These attributes are required and loaded by the game.
-- Attribute Values defined using the following format:
+JSON files are plain text and can be opened in editors such as Visual Studio Code or Notepad++.
+
+The `attributes` array lists the attributes contained in the mesh file.
+
+Each attribute generally contains a `type` and a `buffer`:
 
 ```yaml
 "type": [
-   "int", # (1)!
-   1 # (2)!
-  ],
-"buffer": [ .... ] # (3)!
-```  
+    "int", # (1)!
+    1 # (2)!
+],
+"buffer": [ # (3)!
+    ...
+]
+```
 
-1. The type of the buffer, it's often `int` or `float`
-2. The size of the vector, vector can sort data in sevral dimentions 
-3. The array of values is in the `buffer` property
+1. The data type stored in the buffer, commonly `int` or `float`.
+2. The number of components in each value. For example, a value of `3` indicates a three-component vector.
+3. The actual values are stored in the `buffer` property.
 
-Here is an anatomy of a full json file.
+A simplified mesh file looks like this:
+
 ``` yaml
 {"attributes": [
     "Vertex_Position", # (1)!
@@ -81,7 +104,7 @@ Here is an anatomy of a full json file.
             ...
         ]
     },
-    "Vertex_Position": {
+    "Vertex_Position": { # (1)!
         "type": [
             "float",
             3
@@ -95,7 +118,7 @@ Here is an anatomy of a full json file.
             ...
         ]
     },
-    "Vertex_Normal": {
+    "Vertex_Normal": { # (2)!
         "type": [
             "float",
             3
@@ -109,7 +132,7 @@ Here is an anatomy of a full json file.
             ...
         ]
     },
-    "Vertex_Color": {
+    "Vertex_Color": { # (3)!
         "type": [
             "float",
             3
@@ -123,7 +146,7 @@ Here is an anatomy of a full json file.
             ...
         ]
     },
-    "Vertex_UV": {
+    "Vertex_UV": { # (4)!
         "type": [
             "float",
             2
@@ -138,69 +161,102 @@ Here is an anatomy of a full json file.
 }
 ```
 
-1. `Vertex_Position` represents the position of each vertex in 3D space. It is a **Vector3** composed of float values.  
-2. `Vertex_Normal` defines the normal orientation of each vertex.  
-3. `Vertex_Color` represents the RGB color of each vertex.
-4. `Vertex_UV` is the **2D representation** of the vertex, used by some meshes for texture mapping.  
-   **Unfortunately, textures are not yet well understood.**  
-5. `Indices` define the faces of the mesh. Each number represents a vertex index,and they work in groups of three. Each group of three numbers forms a **triangle**. Unlike `Vertex_Position`, `Indices` are stored as an **array of integers**, not as a **Vector3**. ![faces](https://upload.wikimedia.org/wikipedia/commons/2/2d/Mesh_fv.jpg)
+The main components are:
 
-### About Vectors  
-Vectors in **Tiny Glade** follow the same coordinate system as **Unity**, where:  
-- **Y** goes **up**  
-- **X** goes **left**  
-<figure markdown="span">  
-  ![axis order](axis-order.jpg){ width="500" }  
-  <figcaption>Coordinate system comparison across different software</figcaption>  
+1. `Vertex_Position` stores the position of each vertex in 3D space. Each position is a **three-component vector** containing floating-point values.
+
+2. `Vertex_Normal` stores the normal direction of each vertex.
+
+3. `Vertex_Color` stores the RGB colour associated with each vertex.
+
+4. `Vertex_UV` stores the **2D texture coordinates** associated with each vertex and is used by some meshes for texture mapping.
+
+5. `indices` defines the faces of the mesh. Each integer refers to a vertex index, and the values are interpreted in groups of three. Each group of three indices defines one **triangle**.
+
+   Unlike `Vertex_Position`, indices are stored as an **array of integers**, rather than as three-component vectors.
+
+   ![Mesh vertices and faces](https://upload.wikimedia.org/wikipedia/commons/2/2d/Mesh_fv.jpg)
+
+### About Vectors
+
+Vectors in **Tiny Glade** use a coordinate system in which:
+
+* **Y** points upward.
+* **X** runs horizontally.
+
+<figure style="width: 500px;">
+  <img src="./images/axis-order.jpg" alt="Coordinate axis comparison" width="500">
+  <figcaption>Coordinate system comparison across different software.</figcaption>
 </figure>
 
-### About Colors
+## Vertex Colours
 
-Most items in the game do not use textures. Instead, each vertex's color is stored in a separate array. Each entry in this array corresponds to a vertex at the same index in the `Vertex_Position` array.  
-Colors are represented as vectors with three float components—each ranging from **0.0 to 1.0**—corresponding to the **Red**, **Green**, and **Blue** channels.  
-For example: `[0.2, 0.2, 0.18039216101169586]`.
+Many built-in JSON meshes do not use conventional image textures. Instead, colour information is stored directly on each vertex.
 
-Each vertex **must** have a corresponding color entry. This means the color array must be exactly the same size as the `Vertex_Position` array. If the sizes differ, the game will crash at startup.  
-_(The specific error message will be added here later.)_
+Each entry in the `Vertex_Color` array corresponds to a vertex at the same position in the `Vertex_Position` array.
 
----
-
-#### RGB Color Basics
-
-RGB stands for **Red**, **Green**, and **Blue**—the primary colors of light used in digital displays to create all visible colors.
-
-Each channel (R, G, or B) can take a value from **0 to 255**:
-- `0` means none of that color.
-- `255` means full intensity of that color.
-
-In hexadecimal (hex) notation, RGB values are written as `#RRGGBB`, where:
-- `RR` = Red
-- `GG` = Green
-- `BB` = Blue
-
-Each component is a hex number from `00` (decimal 0) to `FF` (decimal 255).  
-Examples:
-- `#FF0000` = Red (255, 0, 0)  
-- `#00FF00` = Green (0, 255, 0)  
-- `#0000FF` = Blue (0, 0, 255)  
-- `#FFFFFF` = White (255, 255, 255)  
-- `#000000` = Black (0, 0, 0)  
-- `#FFFF00` = Yellow (255, 255, 0)  
-
----
-
-#### Tiny Glade Color Format
-
-In **Tiny Glade**, the same RGB principles apply, but the values are represented as **floats between 0 and 1** rather than integers between 0 and 255. Additionally, the color components are stored in an **array** rather than a single hex string.
+Colours are represented as three floating-point components ranging from **0.0 to 1.0**, corresponding to the **red**, **green**, and **blue** channels.
 
 For example:
-- `[1.0, 0.0, 0.0]` = Red  
-- `[0.0, 1.0, 0.0]` = Green  
-- `[0.0, 0.0, 1.0]` = Blue  
 
----
+```text
+[0.2, 0.2, 0.18039216101169586]
+```
 
-*Tip: I use the [ColorHexa](https://www.colorhexa.com/) tool to easily convert between hex codes and RGB percentage. And [srgb-linear](https://apps.colorjs.io/picker/srgb-linear) to get the Linear sRGB equivalent for more fidelity with in Game color*
+Each vertex **must** have a corresponding colour entry. The `Vertex_Color` array must therefore contain the same number of entries as the `Vertex_Position` array. If these sizes differ, the game may crash during loading.
 
-## Import into blender
-Reading lists of vectors in a json file can be very tought. We create a **[Blender](https://blender.org)** add on to allow import and export of json File. You can download the add-on [here](https://github.com/Hbeau/TinyGlade-Blender-AddOn/releases). learn more in the [Tiny Glade Blender AddOn](../modding-tools/mesh-edit-with-blender.md)
+!!! note
+    The specific error message can be documented here once confirmed.
+
+### RGB Colour Basics
+
+RGB stands for **red**, **green**, and **blue**.
+
+In conventional 8-bit RGB notation, each channel has a value from `0` to `255`:
+
+* `0` means no intensity for that channel.
+* `255` means full intensity.
+
+Hexadecimal colours are commonly written as `#RRGGBB`, where:
+
+* `RR` represents red.
+* `GG` represents green.
+* `BB` represents blue.
+
+Examples:
+
+* `#FF0000` = red `(255, 0, 0)`
+* `#00FF00` = green `(0, 255, 0)`
+* `#0000FF` = blue `(0, 0, 255)`
+* `#FFFFFF` = white `(255, 255, 255)`
+* `#000000` = black `(0, 0, 0)`
+* `#FFFF00` = yellow `(255, 255, 0)`
+
+### Tiny Glade Colour Format
+
+Tiny Glade uses the same RGB concept, but stores colour components as **floating-point values between 0 and 1** rather than integers between 0 and 255.
+
+For example:
+
+* `[1.0, 0.0, 0.0]` = red
+* `[0.0, 1.0, 0.0]` = green
+* `[0.0, 0.0, 1.0]` = blue
+
+!!! tip
+    [ColorHexa](https://www.colorhexa.com/) can be used to convert between hexadecimal colours and RGB values.
+
+    [Color.js sRGB Linear](https://apps.colorjs.io/picker/srgb-linear) can be used to obtain linear-sRGB values that may more closely match in-game colours.
+
+## Importing JSON Meshes into Blender
+
+Reading large arrays of vectors directly from a JSON file can be difficult.
+
+A [Blender](https://www.blender.org/) add-on has been created to import and export Tiny Glade's built-in JSON mesh format.
+
+You can download the add-on from the [TinyGlade Blender Add-On releases page](https://github.com/Hbeau/TinyGlade-Blender-AddOn/releases).
+
+For usage instructions, see [Editing Meshes with Blender](../modding-tools/mesh-edit-with-blender.md).
+
+!!! note
+
+    This add-on is intended for the JSON mesh format described on this page. New clutter created through Tiny Glade's official modding support uses `.glb` files and follows a separate workflow.

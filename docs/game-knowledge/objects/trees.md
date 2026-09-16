@@ -1,93 +1,175 @@
 # Trees in Tiny Glade
 
-Trees in Tiny Glade are not ordinary 3‑D objects. They have their own loading rulesand shaders 
-because they have to behave correctly with the seasons. This page explains how the system works, 
-how tree meshes are stored, and walks you through creating your own using the Blender addon.
+Trees in Tiny Glade are not ordinary 3D objects. They use their own loading rules and shaders so they can behave correctly across the different seasons.
 
----
+This page explains how the tree system works, how tree meshes are stored, and how to create your own using the Tiny Glade Blender Add-On.
 
-## Forms and Level‑of‑Detail
+## Forms and Level of Detail
 
-There are three *main* tree models in the base game, each with its own set of LODs, plus
-one “naked” variant used for olden (no leaves). When the camera gets far from a tree,
-the engine swaps in progressively simpler meshes so that performance stays smooth.
+There are three main tree models in the base game, each with its own set of LODs, plus one "naked" variant used for the Olden season when trees have no leaves.
 
-Trees are **not** loaded the same way as normal meshes. The logic that chooses a mesh
-based on the current season lives in the rendering code; in the olden season the naked tree
-model is used.
+When the camera moves farther away from a tree, the engine swaps in progressively simpler meshes to maintain performance.
+
+Trees are **not** loaded in the same way as standard meshes. The logic that selects the appropriate tree mesh depends on the current season. During the Olden season, the naked tree model is used.
 
 ## Registration and Shaders
 
-Trees don’t appear in `nani_mesh.ron` like generic meshes. Instead they are defined in the
-`prefab/` folder and the engine uses a special shader that knows how to decode the
-vertex colours described below.
+Trees do not appear in `nani_mesh.ron` like generic meshes. Instead, they are defined through files in the `prefab/` folder.
 
-!!! info 
-    You *can* register additional trees and load them via the mod tools, but that is beyond
-    the scope of this document. The process is very similar to adding any other prefab;
-    refer to the modding documentation for details.
+The engine uses a dedicated tree shader that interprets the specialised vertex data described below.
+
+!!! info
+
+    Additional trees can be registered and loaded using modding tools, but that process is beyond the scope of this page.
+
+    The process is similar to adding other prefabs. Refer to the relevant modding documentation for details.
 
 ## JSON Format and Vertex Attributes
 
-A tree is stored on disk as a JSON file, just like other meshes. However, the engine
-expects some unusual vertex attributes:
+Tree meshes are stored as JSON files, like other built-in Tiny Glade meshes. However, the engine expects several unusual attributes.
 
-* **Colour channel:**
-  * Red   → U coordinate of a hidden UV map
-  * Green → V coordinate of the hidden UV map
-  * Blue  → flag: `1` = trunk, `0` = canopy
+### Colour Channel
 
-![Tree colour encoding](UV_map.png)
+The vertex colour channels are used to encode additional data:
 
-* **`appear_pos`** – In my comprehention, it's the center point of each quad used for billboard rendering.
-    The game uses this to place the billboards correctly when drawing distant trees.
-* **`prim_center`** – similar to `appear_pos` but tied to the original vertex position.
-  It isn’t well‑documented
+- **Red** → U coordinate of a hidden UV map
+- **Green** → V coordinate of the hidden UV map
+- **Blue** → canopy flag:
+    - `1` = trunk
+    - `0` = canopy
 
-## Blender Add‑on (v1.3+)
+![Tree colour encoding](./images/UV_map.png)
 
-Version 1.3 of the Tiny Glade Blender addon adds support for trees on both import and
-export.
+### `appear_pos`
 
-* **Import:**
-  * Colours are interpreted automatically (UV + trunk/canopy flag).
-  * Two extra vertex sets (`appear_pos` and `prim_center`) are created as separate
-    vertex clouds so you can see and edit them in Blender.
-* **Export:**
-  * A new tree pipeline collects the trunk mesh, canopy mesh, and the two helper
-    clouds. You just choose which object corresponds to each attribute.
-  * Quad‑to‑triangle conversion is now non‑destructive, so you can export quad meshes
-    directly; an edge split is applied for better rendering.
+`appear_pos` appears to represent the centre point of each quad used for billboard rendering.
+
+The game uses this information to position the billboards correctly when rendering distant trees.
+
+!!! note
+
+    The exact role of `appear_pos` has not been fully documented and this interpretation is based on current reverse-engineering work.
+
+### `prim_center`
+
+`prim_center` appears to be similar to `appear_pos`, but tied to the original vertex position.
+
+Its exact purpose is not yet fully understood.
+
+## Blender Add-On Support
+
+Version 1.3 and later of the Tiny Glade Blender Add-On includes dedicated support for importing and exporting tree meshes.
+
+### Import
+
+When importing a tree:
+
+- the encoded colour data is interpreted automatically
+- the hidden UV coordinates and trunk/canopy flag are separated
+- `appear_pos` and `prim_center` are imported as separate vertex clouds so they can be inspected and edited in Blender
+
+### Export
+
+The tree export pipeline collects:
+
+- the trunk mesh
+- the canopy mesh
+- the `appear_pos` helper cloud
+- the `prim_center` helper cloud
+
+You can select which Blender object corresponds to each required attribute before exporting.
+
+Quad-to-triangle conversion is non-destructive, allowing quad meshes to be exported directly. Edge splitting is also applied where needed to improve rendering.
 
 !!! info
-    The quad‑to‑triangle and the edge split step are now generic and applies to all meshes, not just trees.
 
-## Creating a Tree: Step‑by‑Step Tutorial
+    Quad-to-triangle conversion and edge splitting are now part of the general export pipeline and are not limited to tree meshes.
 
-1. **Model the trunk.** Keep it as a separate object from the leaves/canopy.
-2. **Model the canopy.** faces must not be connected to the
-   trunk.
-3. **Select the canopy object, switch to Edit mode and enable the **Canopy** option**
-   in the addon panel. This sets the blue colour flag correctly.
-   ![Toggle Canopy operator](toggle_canopy_operator.png)
-   ![Material attribute toggle](material_attribute.png)
-   ![tree with material attribute enabled](tree.png)
-4. **Create a UV map for the canopy.** Each leaf quad should occupy one of the four
-   corners of the 0–1 UV square (e.g. 0,0 → 0,1 → 1,1 → 1,0). This encodes the hidden
-   billboard UV coords.
-5. **Unwrap the trunk UVs** and leave them as you would normally; they are used for the
-   trunk texture.
-6. **Generate `appear_pos` and `prim_center`.** With the tree object selected, click
-   _Generate Tree Attributes_ in the addon so that the two vertex clouds are filled.
-7. **Verify the helper clouds.** In viewport, show them to make sure they line up with the
-   geometry.
-   ![Generate vertex cloud option](generate_option.png)
-8. **Export the tree.** Go to the export menu, choose the tree pipeline, and designate the
-   trunk, canopy, `appear_pos`, and `prim_center` objects.
-9. **Import into the game.** you can now set your new file in the `/decorators` folder with a name
-   such as `branchy_tree_v1`, `branchy_tree_v2`, or `branchy_tree_v3`.
-10. **Test in Tiny Glade.** Start the game And pray the sheep run till the end of the loading screen
+## Creating a Tree
 
+### 1. Model the Trunk
+
+Create the trunk as a separate object from the leaves or canopy.
+
+### 2. Model the Canopy
+
+Create the canopy as a separate object.
+
+The canopy faces should not be connected directly to the trunk geometry.
+
+### 3. Enable the Canopy Attribute
+
+Select the canopy object, switch to **Edit Mode**, and enable the **Canopy** option in the Blender Add-On panel.
+
+This sets the blue colour-channel flag used to identify canopy geometry.
+
+![Toggle Canopy operator](./images/toggle_canopy_operator.png)
+
+![Material attribute toggle](./images/material_attribute.png)
+
+![Tree with material attribute enabled](./images/tree.png)
+
+### 4. Create a UV Map for the Canopy
+
+Each leaf quad should use the four corners of the `0–1` UV square.
+
+For example:
+
+```text
+(0,0) → (0,1) → (1,1) → (1,0)
+```
+
+These UV coordinates are encoded into the tree's vertex colour data and are used by the billboard rendering system.
+
+### 5. Unwrap the Trunk UVs
+
+The trunk UVs can be unwrapped normally.
+
+These UV coordinates are used for the trunk texture.
+
+### 6. Generate `appear_pos` and `prim_center`
+
+With the tree object selected, use **Generate Tree Attributes** in the Blender Add-On.
+
+This creates the `appear_pos` and `prim_center` helper vertex clouds.
+
+### 7. Verify the Helper Clouds
+
+Display the generated helper clouds in the viewport and check that they align correctly with the tree geometry.
+
+![Generate vertex cloud option](./images/generate_option.png)
+
+### 8. Export the Tree
+
+Open the Tiny Glade tree export menu and select the tree export pipeline.
+
+Assign the appropriate objects for:
+
+- trunk
+- canopy
+- `appear_pos`
+- `prim_center`
+
+Then export the JSON mesh.
+
+### 9. Add the Tree to the Game
+
+The exported tree mesh can be placed in the appropriate `/decorators` location and named according to the expected tree variants, for example:
+
+```text
+branchy_tree_v1
+branchy_tree_v2
+branchy_tree_v3
+```
+
+!!! note
+
+    This section describes the built-in JSON tree asset workflow. If the official modding system gains dedicated support for adding new tree assets, follow the developer documentation for that workflow instead.
+
+### 10. Test in Tiny Glade
+
+Start Tiny Glade and check that the tree loads correctly in-game.
+
+If the game fails during loading, review the exported attributes and verify that the trunk, canopy, UV data, and helper clouds were exported correctly.
 
 :deciduous_tree: Enjoy making your own trees!
-

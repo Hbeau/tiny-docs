@@ -1,58 +1,101 @@
-# Sound editing 
+# Sound Editing
 
-## Introduction 
+## Introduction
 
-After some talks with the Game Dev and the Audio Dev on how to edit files and if it is feasible. They told me editing directly with [Fmod](https://www.fmod.com/) is only possible by editing with the Original Project, but we dont have this.
+After discussing sound editing with the game and audio developers, we learned that directly editing Tiny Glade's audio with [FMOD](https://www.fmod.com/) would require the original FMOD project, which is not publicly available.
 
-So i tried multiple different Tools to edit Fmod files, around 4 different ones i could find. Most i found either dont work with the game files, or unpack into a unreadable, unplayable *.ogg.
+Several tools were tested for extracting and rebuilding FMOD files. Most either did not work with Tiny Glade's files or extracted audio into unreadable or unplayable `.ogg` files.
 
-But at least i found one, which is very easy and simple.
-
+Fortunately, **Fmod-Bank-Tools** provides a relatively simple way to extract, edit, and rebuild the game's audio banks.
 
 ## Necessary Tools
 
-To edit the sounds you only need [Fmod-Bank-Tools](https://github.com/Wouldubeinta/Fmod-Bank-Tools)
+To edit Tiny Glade's sounds, you will need:
 
-For editing the audio i use [Audacity](https://www.audacityteam.org/) or you can use any other Audio editing Software.
+- [Fmod-Bank-Tools](https://github.com/Wouldubeinta/Fmod-Bank-Tools)
+- An audio editor
 
+This guide uses [Audacity](https://www.audacityteam.org/), but any suitable audio editing software can be used.
 
-## Steps
+## Editing Audio
 
-- Download Fmod Bank Tools
-- Unpack it anywhere and keep the folder structure.
-- go to **`...\Tiny Glade\assets\audio\Desktop`**
-- make a Backup of all **[NAME].assets.bank** you want to edit.
+### 1. Find the Audio Banks
+
+Tiny Glade's FMOD audio banks can be found in:
+
+```text
+...\Tiny Glade\assets\audio\Desktop
+```
+
+Before making any changes, create a backup of every `[NAME].assets.bank` file you intend to edit.
+
 !!! info
-     we only ever need to edit the asset.bank files, all other files do not contain any audio
 
-- Copy the files you want to edit into the **`Banks\`** folder inside the Fmod-Bank-Tools folder
+    Only the `.assets.bank` files need to be edited for this process. The other bank files do not contain the audio being replaced.
+
+### 2. Copy the Banks into Fmod-Bank-Tools
+
+Copy the `.assets.bank` files you want to modify into the `Banks` folder inside the Fmod-Bank-Tools directory.
+
 !!! info
-    The same sound effect, can be in multiple *.asset.Bank files. f.e. the sheep sound is in 3 different files and all of them need to be changed to have the sound work consistantly.
-- Run the Tool and press *extract*
-- The tool will now create multiple folders:
-  
-    **fsb** - This Folder has the extracted archives (*.fsb) where the audio files are stored in.
 
-    **wav** - where you find the converted Audio files **This is our Main folder to work with**
+    The same sound effect may appear in multiple `.assets.bank` files.
 
-- you can now open and edit the *.wav files with a editor of your choice
+    For example, a sheep sound may be present in several different banks. Each copy may need to be replaced for the edited sound to be used consistently throughout the game.
 
-!!!Danger
-    - It's important to keep the original bitrate (or lower)  
-      Original Bitrate of TG Audio is 1536 kBit/s or 48000 kHz
+### 3. Extract the Audio
 
-    - The length of the new audio needs to be the same or shorter. (same length is the safe bet to have it work later)
+Run **Fmod-Bank-Tools** and select **Extract**.
 
-    - And ofc. the final filename needs to be the same.
+The tool will create several folders, including:
 
-!!! tipp
-    I always open the original *.wav first. Then load my sound into a second channel so that i can fit my sound to the original channel. After im done, i delete the original channel and save the file overwriting the original.
+- **`fsb/`** — contains the extracted `.fsb` archives where the original audio is stored.
+- **`wav/`** — contains the extracted audio converted to `.wav` files.
 
-- After you are done with all files you want to edit. Open the Fmod-Banks-Tool and press on *rebuild*
-- The tool creates another folder called **`Build\`** where it puts your new files.
-- Copy the new **[NAME].assets.bank** file you just build into the games folder and overwrite the original.
+The `wav` folder is the main folder you will work with when editing sounds.
 
+### 4. Edit the Audio
 
+Open the `.wav` file you want to modify in Audacity or another audio editor.
 
+!!! warning
 
-*Have fun making your own Audio* 
+    When replacing audio, keep the following limitations in mind:
+
+    - Keep the same audio format and sample rate as the original file where possible.
+    - Tiny Glade audio commonly uses a **48 kHz** sample rate.
+    - The replacement audio should be the same length as, or shorter than, the original. Keeping the same duration is the safest option.
+    - The final file name must remain exactly the same as the original.
+
+!!! tip
+
+    A useful workflow in Audacity is to open the original `.wav` file first, then import your replacement audio as a second track.
+
+    This allows you to compare the timing and adjust the replacement audio to match the original. Once finished, remove the original track and export the edited audio using the original file name.
+
+### 5. Rebuild the Audio Bank
+
+After editing all of the desired `.wav` files:
+
+1. Open **Fmod-Bank-Tools**.
+2. Select **Rebuild**.
+3. The tool will create a `Build` folder containing the rebuilt bank files.
+4. Copy the new `[NAME].assets.bank` file back into Tiny Glade's audio folder.
+5. Replace the original file when prompted.
+
+!!! warning
+
+    Make sure you have a backup of the original bank before replacing it. Game updates may also restore modified audio files.
+
+## Restoring the Original Audio
+
+If the modified audio causes problems, you can either restore your backup or use Steam to restore Tiny Glade's original files:
+
+1. Open **Tiny Glade** in your Steam library.
+2. Click the **gear icon** and select **Properties**.
+3. Open **Installed Files**.
+4. Select **Verify integrity of game files**.
+
+Steam will restore modified or missing game files.
+
+Have fun creating your own Tiny Glade audio replacements!
