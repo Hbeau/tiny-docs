@@ -40,7 +40,7 @@ Current topics include:
     - [Roofs](game-knowledge/objects/roofs.md)
     - [Clutter](game-knowledge/objects/clutter.md)
     - [Flags](game-knowledge/objects/flags.md)
-    - [Textures](game-knowledge/objects/textures.md)
+    - [Terrain Mod Tutorial](game-knowledge/objects/terrain_mods/terrain.md)
 
 ## Modding Tools
 
