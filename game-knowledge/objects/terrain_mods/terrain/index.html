@@ -11,26 +11,28 @@
       
       
       
+        <link rel="prev" href="../../flags/">
       
-        <link rel="next" href="game-knowledge/game-structure/">
+      
+        <link rel="next" href="../water_plane/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Tiny Docs</title>
+        <title>Terrain Mesh - Tiny Docs</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-tiny-glade-modding-documentation" class="md-skip">
+        <a href="#terrain-modding" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Tiny Docs" class="md-header__button md-logo" aria-label="Tiny Docs" data-md-component="logo">
+    <a href="../../../.." title="Tiny Docs" class="md-header__button md-logo" aria-label="Tiny Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Terrain Mesh
             
           </span>
         </div>
@@ -186,7 +188,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Tiny Docs" class="md-nav__button md-logo" aria-label="Tiny Docs" data-md-component="logo">
+    <a href="../../../.." title="Tiny Docs" class="md-nav__button md-logo" aria-label="Tiny Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -201,37 +203,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -247,59 +222,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#official-modding-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Official Modding Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#game-knowledge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Game Knowledge
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modding-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Modding Tools
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -308,18 +230,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -340,7 +264,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -358,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/game-structure/" class="md-nav__link">
+      <a href="../../../game-structure/" class="md-nav__link">
         
   
   
@@ -386,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/meshes/" class="md-nav__link">
+      <a href="../../../meshes/" class="md-nav__link">
         
   
   
@@ -411,18 +335,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -443,7 +369,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -461,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/sheeps/" class="md-nav__link">
+      <a href="../../sheeps/" class="md-nav__link">
         
   
   
@@ -489,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/trees/" class="md-nav__link">
+      <a href="../../trees/" class="md-nav__link">
         
   
   
@@ -517,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mgame-knowledge/objects/windows.md" class="md-nav__link">
+      <a href="../../../../mgame-knowledge/objects/windows.md" class="md-nav__link">
         
   
   
@@ -545,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/garden-brush.md" class="md-nav__link">
+      <a href="../../garden-brush.md" class="md-nav__link">
         
   
   
@@ -573,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/ducks/" class="md-nav__link">
+      <a href="../../ducks/" class="md-nav__link">
         
   
   
@@ -601,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/roofs/" class="md-nav__link">
+      <a href="../../roofs/" class="md-nav__link">
         
   
   
@@ -629,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/clutter/" class="md-nav__link">
+      <a href="../../clutter/" class="md-nav__link">
         
   
   
@@ -657,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/flags/" class="md-nav__link">
+      <a href="../../flags/" class="md-nav__link">
         
   
   
@@ -682,18 +608,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_9" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3_9" id="__nav_2_3_9_label" tabindex="0">
@@ -714,7 +642,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -729,10 +657,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="game-knowledge/objects/terrain_mods/terrain/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terrain Mesh
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -748,6 +703,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-terrain-mesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Terrain Mesh
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Terrain Mesh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-import-the-original-terrain-into-blender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Import the Original Terrain into Blender
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-model-the-new-terrain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Model the New Terrain
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Model the New Terrain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-areas-for-water" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparing Areas for Water
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-export-the-terrain-mesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Export the Terrain Mesh
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Step
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -760,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/terrain_mods/water_plane/" class="md-nav__link">
+      <a href="../water_plane/" class="md-nav__link">
         
   
   
@@ -788,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/terrain_mods/bg_trees/" class="md-nav__link">
+      <a href="../bg_trees/" class="md-nav__link">
         
   
   
@@ -816,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/terrain_mods/plants/" class="md-nav__link">
+      <a href="../plants/" class="md-nav__link">
         
   
   
@@ -844,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/terrain_mods/rocks/" class="md-nav__link">
+      <a href="../rocks/" class="md-nav__link">
         
   
   
@@ -872,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/objects/terrain_mods/textures/" class="md-nav__link">
+      <a href="../textures/" class="md-nav__link">
         
   
   
@@ -916,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/save/" class="md-nav__link">
+      <a href="../../../save/" class="md-nav__link">
         
   
   
@@ -944,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game-knowledge/starterbuilds/" class="md-nav__link">
+      <a href="../../../starterbuilds/" class="md-nav__link">
         
   
   
@@ -1026,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modding-tools/installing-assets/" class="md-nav__link">
+      <a href="../../../../modding-tools/installing-assets/" class="md-nav__link">
         
   
   
@@ -1054,7 +1107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modding-tools/lut-editing/" class="md-nav__link">
+      <a href="../../../../modding-tools/lut-editing/" class="md-nav__link">
         
   
   
@@ -1082,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modding-tools/mesh-edit-with-blender/" class="md-nav__link">
+      <a href="../../../../modding-tools/mesh-edit-with-blender/" class="md-nav__link">
         
   
   
@@ -1110,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modding-tools/sound-editing/" class="md-nav__link">
+      <a href="../../../../modding-tools/sound-editing/" class="md-nav__link">
         
   
   
@@ -1165,32 +1218,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#official-modding-documentation" class="md-nav__link">
+  <a href="#the-terrain-mesh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Official Modding Documentation
+        The Terrain Mesh
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Terrain Mesh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-import-the-original-terrain-into-blender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Import the Original Terrain into Blender
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#game-knowledge" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-model-the-new-terrain" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Game Knowledge
+        2. Model the New Terrain
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Model the New Terrain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-areas-for-water" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparing Areas for Water
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#modding-tools" class="md-nav__link">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-export-the-terrain-mesh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modding Tools
+        3. Export the Terrain Mesh
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Step
       
     </span>
   </a>
@@ -1214,53 +1312,80 @@
 
 
 
-<h1 id="welcome-to-tiny-glade-modding-documentation">Welcome to Tiny Glade Modding Documentation</h1>
-<p><em>By Rapunzilla</em></p>
-<p>Tiny Glade is a cosy diorama builder where you can create whimsical castles, cottages, ruins, and landscapes using a flexible, gridless building system.</p>
-<p>There are no management systems, combat mechanics, or objectives. The focus is entirely on building, experimenting, and creating detailed scenes.</p>
-<p><strong><a href="https://store.steampowered.com/app/2198150/Tiny_Glade/">Tiny Glade</a></strong> is developed and published by <a href="https://x.com/pouncelight">Pounce Light</a> and was released on <strong>September 23, 2024</strong>.</p>
-<p>The game is written in <strong><a href="https://www.rust-lang.org/">Rust</a></strong> and uses the <strong><a href="https://bevyengine.org/">Bevy</a></strong> game engine.</p>
-<p>Tiny Glade now includes <strong>official mod support</strong> together with a <a href="https://steamcommunity.com/app/2198150/workshop/">Steam Workshop</a>.</p>
-<p>For most users, the official modding system and Steam Workshop are the recommended way to create, install, and share mods. The community also continues to document older asset-replacement methods and reverse-engineered game systems.</p>
-<p>The modding community is active on Tiny Glade's <strong>Discord server</strong>, which can be accessed through the in-game menu. You can also visit the <a href="https://www.reddit.com/r/TinyGladeMods/">Tiny Glade Mods subreddit</a> for community discoveries, guides, and modding discussions.</p>
-<h2 id="official-modding-documentation">Official Modding Documentation</h2>
-<p>The official Tiny Glade modding guide is available on the <a href="https://pouncelight.games/tiny-glade/info/modding/">Pounce Light website</a>.</p>
-<p>This should be the first reference for information about supported modding features, including Steam Workshop integration and creating new clutter mods.</p>
-<h2 id="game-knowledge">Game Knowledge</h2>
-<p>Tiny Docs also documents game systems and asset formats that have been investigated by the community.</p>
-<p>Current topics include:</p>
-<ul>
-<li><a href="game-knowledge/game-structure/">Game Structure</a> — an overview of Tiny Glade's files and asset organisation.</li>
-<li><a href="game-knowledge/meshes/">Mesh Rendering</a> — information about the built-in JSON mesh format and vertex data.</li>
-<li><a href="game-knowledge/save/">Saves</a> — information about Tiny Glade save files, history, and snapshots</li>
-<li><a href="game-knowledge/starterbuilds/">Starter Builds</a> — an overview of Tiny Glade's starter builds and adding new ones.</li>
-<li>Replacing Assets:<ul>
-<li><a href="game-knowledge/objects/sheeps/">Sheep</a></li>
-<li><a href="game-knowledge/objects/trees/">Trees</a></li>
-<li><a href="game-knowledge/objects/windows/">Windows</a></li>
-<li><a href="game-knowledge/objects/terrain.md">Terrain</a></li>
-<li><a href="game-knowledge/objects/garden_brush/">Garden Brush</a></li>
-<li><a href="game-knowledge/objects/ducks/">Ducks</a></li>
-<li><a href="game-knowledge/objects/roofs/">Roofs</a></li>
-<li><a href="game-knowledge/objects/clutter/">Clutter</a></li>
-<li><a href="game-knowledge/objects/flags/">Flags</a></li>
-<li><a href="game-knowledge/objects/terrain_mods/terrain/">Terrain Mod Tutorial</a></li>
-</ul>
+<h1 id="terrain-modding">Terrain Modding</h1>
+<p><em>By Rampion</em></p>
+<p>Terrain mods in Tiny Glade currently work by replacing the game's existing terrain assets.</p>
+<p>This tutorial covers the basic workflow for creating a custom terrain <a href="../../../meshes/">mesh</a>, water geometry, seasonal textures, trees, plants, rocks, and other terrain-bound assets and preparing them for use in-game.</p>
+<h2 id="the-terrain-mesh">The Terrain Mesh</h2>
+<h3 id="1-import-the-original-terrain-into-blender">1. Import the Original Terrain into Blender</h3>
+<p>Before modelling a new terrain, import Tiny Glade's original terrain mesh into Blender using the <a href="../modding-tools/mesh-edit-with-blender.md">Tiny Glade Blender Add-On</a>.</p>
+<p>The terrain file can be found at:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Tiny Glade/assets/meshes/terrain.json
+</span></code></pre></div>
+<p>Import <code>terrain.json</code> into Blender and make sure to check the normals! Sometimes normals can be imported swapped. Check normals by:</p>
+<ol>
+<li>
+<p>Clicking <code>Overlays</code> in the viewport display
+<img alt="Overlays" class="center" src="../images/face_orientation.jpg" /></p>
 </li>
-</ul>
-<h2 id="modding-tools">Modding Tools</h2>
-<p>Explore community guides and tools for working with Tiny Glade:</p>
-<ul>
-<li><a href="modding-tool/installing-assets.md">Installing Assets</a> — working with the legacy Whiterun program for installing Tiny Glade assets.</li>
-<li><a href="modding-tools/mesh-edit-with-blender/">Mesh Editing with Blender Add-On</a> — import, inspect, edit, and export Tiny Glade's built-in JSON meshes for asset replacement mods.</li>
-<li><a href="modding-tools/sound-editing/">Sound Editing</a> — information about Tiny Glade sounds and music and how to replace them.</li>
-<li><a href="modding-tools/lut-editing/">LUT Editing</a> — information about the games photomode filters and styles and how to change them.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The Blender Add-On is primarily used for Tiny Glade's built-in JSON mesh format and legacy asset-replacement workflows.</p>
-<p>New clutter created through Tiny Glade's official modding system uses <code>.glb</code> files and does not require the JSON Blender Add-On workflow.</p>
+<li>
+<p>If the mesh looks red that means its inside out and it won't render properly. Swap the normals by tabbing into Edit Mode, pressing <code>A</code> to select all verticies, and then <code>Shift + N</code> to swap the normals. The <code>inside</code> box at the bottom should remain unchecked, and the mesh should no longer be red.</p>
+</li>
+</ol>
+<p><img alt="Normals Button" src="../images/normals_button.JPG" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The original terrain contains a square cutout that marks the playable glade area.</p>
+<p>This cutout is important because it shows exactly where the glade sits within the larger terrain mesh. Keep the original terrain visible while modelling so you can align your replacement terrain correctly with the edges of the glade.</p>
 </div>
+<p>The original terrain can therefore be used as a reference for:</p>
+<ul>
+<li>the position of the glade</li>
+<li>the size of the glade opening</li>
+<li>the overall scale and alignment of the replacement terrain</li>
+</ul>
+<p><img alt="Import terrain" src="../images/import_terrain_mesh.JPG" /></p>
+<h3 id="2-model-the-new-terrain">2. Model the New Terrain</h3>
+<p>Create or edit your terrain while keeping the original <code>terrain.json</code> mesh available as a reference.</p>
+<p>The most important requirement is that the new terrain lines up correctly with the edges of the glade opening.</p>
+<p>You can reshape the surrounding landscape however you like, for example by creating:</p>
+<ul>
+<li>hills</li>
+<li>mountains</li>
+<li>cliffs</li>
+<li>valleys</li>
+<li>riverbanks</li>
+<li>coastlines</li>
+<li>lakeshores</li>
+</ul>
+<p><img alt="Glade Opening" src="../images/glade_opening.jpg" /></p>
+<h4 id="preparing-areas-for-water">Preparing Areas for Water</h4>
+<p>If you want water to reach the edge of the glade, such as for a river, lake, or ocean, lower the terrain vertices in that area by moving them down along the z-axis.</p>
+<p>Pull the relevant vertices down far enough that the water plane can sit above them without the terrain clipping through the water surface.</p>
+<p><img alt="Lower Verts for Water" src="../images/vertices_below_water_plane.jpg" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It can be useful to position a temporary plane at the intended water height while modelling. This makes it easier to see which parts of the terrain need to be lowered.</p>
+</div>
+<h3 id="3-export-the-terrain-mesh">3. Export the Terrain Mesh</h3>
+<p>Once the new terrain is finished, export it using the Tiny Glade Blender Add-On.</p>
+<p>The terrain mesh should include:</p>
+<ul>
+<li><strong>Vertex Position</strong></li>
+<li><strong>Vertex Normal</strong></li>
+<li><strong>Vertex UV</strong></li>
+<li><strong>Face Indices</strong></li>
+</ul>
+<p>Do <strong>not</strong> export vertex colours for the terrain mesh.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure the exported terrain contains the required UVs, normals, face indices, and vertex positions.</p>
+<p>Vertex colours are not required for this mesh and should not be included.</p>
+</div>
+<p>Export the finished mesh as a Tiny Glade JSON mesh and use it to replace the original <code>terrain.json</code>.</p>
+<p><img alt="Terrain Export Settings" src="../images/terrain_export_settings.jpg" /></p>
+<h2 id="next-step">Next Step</h2>
+<p>Continue to the next step <a href="../water_plane/">editing the water plane</a>.</p>
 
 
 
@@ -1310,10 +1435,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

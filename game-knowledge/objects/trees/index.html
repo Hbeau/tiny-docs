@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The Knowledge base for Tiny modders">
+        <meta name="description" content="The knowledge base for Tiny Modders">
       
       
       
@@ -14,7 +14,7 @@
         <link rel="prev" href="../sheeps/">
       
       
-        <link rel="next" href="../../save/">
+        <link rel="next" href="../ducks/">
       
       
         
@@ -394,7 +394,7 @@
   <span class="md-ellipsis">
     
   
-    Sheeps
+    Sheep
   
 
     
@@ -475,10 +475,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#forms-and-levelofdetail" class="md-nav__link">
+  <a href="#forms-and-level-of-detail" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Forms and Level‑of‑Detail
+        Forms and Level of Detail
       
     </span>
   </a>
@@ -505,33 +505,607 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blender-addon-v13" class="md-nav__link">
+    <nav class="md-nav" aria-label="JSON Format and Vertex Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colour-channel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Blender Add‑on (v1.3+)
+        Colour Channel
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-tree-stepbystep-tutorial" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#appear_pos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating a Tree: Step‑by‑Step Tutorial
+        appear_pos
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prim_center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        prim_center
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blender-add-on-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blender Add-On Support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blender Add-On Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Tree
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-model-the-trunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Model the Trunk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-model-the-canopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Model the Canopy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-enable-the-canopy-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Enable the Canopy Attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-create-a-uv-map-for-the-canopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Create a UV Map for the Canopy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-unwrap-the-trunk-uvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Unwrap the Trunk UVs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-generate-appear_pos-and-prim_center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Generate appear_pos and prim_center
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-verify-the-helper-clouds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Verify the Helper Clouds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-export-the-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Export the Tree
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-add-the-tree-to-the-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Add the Tree to the Game
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-test-in-tiny-glade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Test in Tiny Glade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mgame-knowledge/objects/windows.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../garden-brush.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garden Brush
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ducks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ducks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roofs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clutter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_9" id="__nav_2_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terrain
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terrain
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terrain_mods/terrain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terrain Mesh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terrain_mods/water_plane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terrain Water Plane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terrain_mods/bg_trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terrain Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terrain_mods/plants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terrain Plants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terrain_mods/rocks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terrain Rocks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terrain_mods/textures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terrain Textures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -802,10 +1376,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#forms-and-levelofdetail" class="md-nav__link">
+  <a href="#forms-and-level-of-detail" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Forms and Level‑of‑Detail
+        Forms and Level of Detail
       
     </span>
   </a>
@@ -832,27 +1406,210 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blender-addon-v13" class="md-nav__link">
+    <nav class="md-nav" aria-label="JSON Format and Vertex Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colour-channel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Blender Add‑on (v1.3+)
+        Colour Channel
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-tree-stepbystep-tutorial" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#appear_pos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating a Tree: Step‑by‑Step Tutorial
+        appear_pos
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prim_center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        prim_center
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blender-add-on-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blender Add-On Support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blender Add-On Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Tree
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-model-the-trunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Model the Trunk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-model-the-canopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Model the Canopy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-enable-the-canopy-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Enable the Canopy Attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-create-a-uv-map-for-the-canopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Create a UV Map for the Canopy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-unwrap-the-trunk-uvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Unwrap the Trunk UVs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-generate-appear_pos-and-prim_center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Generate appear_pos and prim_center
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-verify-the-helper-clouds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Verify the Helper Clouds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-export-the-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Export the Tree
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-add-the-tree-to-the-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Add the Tree to the Game
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-test-in-tiny-glade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Test in Tiny Glade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -874,87 +1631,118 @@
 
 
 <h1 id="trees-in-tiny-glade">Trees in Tiny Glade</h1>
-<p>Trees in Tiny Glade are not ordinary 3‑D objects. They have their own loading rulesand shaders 
-because they have to behave correctly with the seasons. This page explains how the system works, 
-how tree meshes are stored, and walks you through creating your own using the Blender addon.</p>
-<hr />
-<h2 id="forms-and-levelofdetail">Forms and Level‑of‑Detail</h2>
-<p>There are three <em>main</em> tree models in the base game, each with its own set of LODs, plus
-one “naked” variant used for olden (no leaves). When the camera gets far from a tree,
-the engine swaps in progressively simpler meshes so that performance stays smooth.</p>
-<p>Trees are <strong>not</strong> loaded the same way as normal meshes. The logic that chooses a mesh
-based on the current season lives in the rendering code; in the olden season the naked tree
-model is used.</p>
+<p><em>By Rapunzilla</em></p>
+<p>Trees in Tiny Glade are not ordinary 3D objects. They use their own loading rules and shaders so they can behave correctly across the different seasons.</p>
+<p>This page explains how the tree system works, how tree meshes are stored, and how to create your own using the Tiny Glade Blender Add-On.</p>
+<h2 id="forms-and-level-of-detail">Forms and Level of Detail</h2>
+<p>There are three main tree models in the base game, each with its own set of LODs, plus one "naked" variant used for the Olden season when trees have no leaves.</p>
+<p>When the camera moves farther away from a tree, the engine swaps in progressively simpler meshes to maintain performance.</p>
+<p>Trees are <strong>not</strong> loaded in the same way as standard meshes. The logic that selects the appropriate tree mesh depends on the current season. During the Olden season, the naked tree model is used.</p>
 <h2 id="registration-and-shaders">Registration and Shaders</h2>
-<p>Trees don’t appear in <code>nani_mesh.ron</code> like generic meshes. Instead they are defined in the
-<code>prefab/</code> folder and the engine uses a special shader that knows how to decode the
-vertex colours described below.</p>
+<p>Trees do not appear in <code>nani_mesh.ron</code> like generic meshes. Instead, they are defined through files in the <code>prefab/</code> folder.</p>
+<p>The engine uses a dedicated tree shader that interprets the specialised vertex data described below.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>You <em>can</em> register additional trees and load them via the mod tools, but that is beyond
-the scope of this document. The process is very similar to adding any other prefab;
-refer to the modding documentation for details.</p>
+<p>Additional trees can be registered and loaded using modding tools, but that process is beyond the scope of this page.</p>
+<p>The process is similar to adding other prefabs. Refer to the relevant modding documentation for details.</p>
 </div>
 <h2 id="json-format-and-vertex-attributes">JSON Format and Vertex Attributes</h2>
-<p>A tree is stored on disk as a JSON file, just like other meshes. However, the engine
-expects some unusual vertex attributes:</p>
+<p>Tree meshes are stored as JSON files, like other built-in Tiny Glade meshes. However, the engine expects several unusual attributes.</p>
+<h3 id="colour-channel">Colour Channel</h3>
+<p>The vertex colour channels are used to encode additional data:</p>
 <ul>
-<li><strong>Colour channel:</strong></li>
-<li>Red   → U coordinate of a hidden UV map</li>
-<li>Green → V coordinate of the hidden UV map</li>
-<li>Blue  → flag: <code>1</code> = trunk, <code>0</code> = canopy</li>
+<li><strong>Red</strong> → U coordinate of a hidden UV map</li>
+<li><strong>Green</strong> → V coordinate of the hidden UV map</li>
+<li><strong>Blue</strong> → canopy flag:<ul>
+<li><code>1</code> = trunk</li>
+<li><code>0</code> = canopy</li>
 </ul>
-<p><img alt="Tree colour encoding" src="../UV_map.png" /></p>
+</li>
+</ul>
+<p><img alt="Tree colour encoding" src="../images/UV_map.png" /></p>
+<h3 id="appear_pos"><code>appear_pos</code></h3>
+<p><code>appear_pos</code> appears to represent the centre point of each quad used for billboard rendering.</p>
+<p>The game uses this information to position the billboards correctly when rendering distant trees.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The exact role of <code>appear_pos</code> has not been fully documented and this interpretation is based on current reverse-engineering work.</p>
+</div>
+<h3 id="prim_center"><code>prim_center</code></h3>
+<p><code>prim_center</code> appears to be similar to <code>appear_pos</code>, but tied to the original vertex position.</p>
+<p>Its exact purpose is not yet fully understood.</p>
+<h2 id="blender-add-on-support">Blender Add-On Support</h2>
+<p>Version 1.3 and later of the Tiny Glade Blender Add-On includes dedicated support for importing and exporting tree meshes.</p>
+<h3 id="import">Import</h3>
+<p>When importing a tree:</p>
 <ul>
-<li><strong><code>appear_pos</code></strong> – In my comprehention, it's the center point of each quad used for billboard rendering.
-    The game uses this to place the billboards correctly when drawing distant trees.</li>
-<li><strong><code>prim_center</code></strong> – similar to <code>appear_pos</code> but tied to the original vertex position.
-  It isn’t well‑documented</li>
+<li>the encoded colour data is interpreted automatically</li>
+<li>the hidden UV coordinates and trunk/canopy flag are separated</li>
+<li><code>appear_pos</code> and <code>prim_center</code> are imported as separate vertex clouds so they can be inspected and edited in Blender</li>
 </ul>
-<h2 id="blender-addon-v13">Blender Add‑on (v1.3+)</h2>
-<p>Version 1.3 of the Tiny Glade Blender addon adds support for trees on both import and
-export.</p>
+<h3 id="export">Export</h3>
+<p>The tree export pipeline collects:</p>
 <ul>
-<li><strong>Import:</strong></li>
-<li>Colours are interpreted automatically (UV + trunk/canopy flag).</li>
-<li>Two extra vertex sets (<code>appear_pos</code> and <code>prim_center</code>) are created as separate
-    vertex clouds so you can see and edit them in Blender.</li>
-<li><strong>Export:</strong></li>
-<li>A new tree pipeline collects the trunk mesh, canopy mesh, and the two helper
-    clouds. You just choose which object corresponds to each attribute.</li>
-<li>Quad‑to‑triangle conversion is now non‑destructive, so you can export quad meshes
-    directly; an edge split is applied for better rendering.</li>
+<li>the trunk mesh</li>
+<li>the canopy mesh</li>
+<li>the <code>appear_pos</code> helper cloud</li>
+<li>the <code>prim_center</code> helper cloud</li>
 </ul>
+<p>You can select which Blender object corresponds to each required attribute before exporting.</p>
+<p>Quad-to-triangle conversion is non-destructive, allowing quad meshes to be exported directly. Edge splitting is also applied where needed to improve rendering.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The quad‑to‑triangle and the edge split step are now generic and applies to all meshes, not just trees.</p>
+<p>Quad-to-triangle conversion and edge splitting are now part of the general export pipeline and are not limited to tree meshes.</p>
 </div>
-<h2 id="creating-a-tree-stepbystep-tutorial">Creating a Tree: Step‑by‑Step Tutorial</h2>
-<ol>
-<li><strong>Model the trunk.</strong> Keep it as a separate object from the leaves/canopy.</li>
-<li><strong>Model the canopy.</strong> faces must not be connected to the
-   trunk.</li>
-<li><strong>Select the canopy object, switch to Edit mode and enable the </strong>Canopy<strong> option</strong>
-   in the addon panel. This sets the blue colour flag correctly.
-   <img alt="Toggle Canopy operator" src="../toggle_canopy_operator.png" />
-   <img alt="Material attribute toggle" src="../material_attribute.png" />
-   <img alt="tree with material attribute enabled" src="../tree.png" /></li>
-<li><strong>Create a UV map for the canopy.</strong> Each leaf quad should occupy one of the four
-   corners of the 0–1 UV square (e.g. 0,0 → 0,1 → 1,1 → 1,0). This encodes the hidden
-   billboard UV coords.</li>
-<li><strong>Unwrap the trunk UVs</strong> and leave them as you would normally; they are used for the
-   trunk texture.</li>
-<li><strong>Generate <code>appear_pos</code> and <code>prim_center</code>.</strong> With the tree object selected, click
-   <em>Generate Tree Attributes</em> in the addon so that the two vertex clouds are filled.</li>
-<li><strong>Verify the helper clouds.</strong> In viewport, show them to make sure they line up with the
-   geometry.
-   <img alt="Generate vertex cloud option" src="../generate_option.png" /></li>
-<li><strong>Export the tree.</strong> Go to the export menu, choose the tree pipeline, and designate the
-   trunk, canopy, <code>appear_pos</code>, and <code>prim_center</code> objects.</li>
-<li><strong>Import into the game.</strong> you can now set your new file in the <code>/decorators</code> folder with a name
-   such as <code>branchy_tree_v1</code>, <code>branchy_tree_v2</code>, or <code>branchy_tree_v3</code>.</li>
-<li><strong>Test in Tiny Glade.</strong> Start the game And pray the sheep run till the end of the loading screen</li>
-</ol>
+<h2 id="creating-a-tree">Creating a Tree</h2>
+<h3 id="1-model-the-trunk">1. Model the Trunk</h3>
+<p>Create the trunk as a separate object from the leaves or canopy.</p>
+<h3 id="2-model-the-canopy">2. Model the Canopy</h3>
+<p>Create the canopy as a separate object.</p>
+<p>The canopy faces should not be connected directly to the trunk geometry.</p>
+<h3 id="3-enable-the-canopy-attribute">3. Enable the Canopy Attribute</h3>
+<p>Select the canopy object, switch to <strong>Edit Mode</strong>, and enable the <strong>Canopy</strong> option in the Blender Add-On panel.</p>
+<p>This sets the blue colour-channel flag used to identify canopy geometry.</p>
+<p><img alt="Toggle Canopy operator" src="../images/toggle_canopy_operator.png" /></p>
+<p><img alt="Material attribute toggle" src="../images/material_attribute.png" /></p>
+<p><img alt="Tree with material attribute enabled" src="../images/tree.png" /></p>
+<h3 id="4-create-a-uv-map-for-the-canopy">4. Create a UV Map for the Canopy</h3>
+<p>Each leaf quad should use the four corners of the <code>0–1</code> UV square.</p>
+<p>For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>(0,0) → (0,1) → (1,1) → (1,0)
+</span></code></pre></div>
+<p>These UV coordinates are encoded into the tree's vertex colour data and are used by the billboard rendering system.</p>
+<h3 id="5-unwrap-the-trunk-uvs">5. Unwrap the Trunk UVs</h3>
+<p>The trunk UVs can be unwrapped normally.</p>
+<p>These UV coordinates are used for the trunk texture.</p>
+<h3 id="6-generate-appear_pos-and-prim_center">6. Generate <code>appear_pos</code> and <code>prim_center</code></h3>
+<p>With the tree object selected, use <strong>Generate Tree Attributes</strong> in the Blender Add-On.</p>
+<p>This creates the <code>appear_pos</code> and <code>prim_center</code> helper vertex clouds.</p>
+<h3 id="7-verify-the-helper-clouds">7. Verify the Helper Clouds</h3>
+<p>Display the generated helper clouds in the viewport and check that they align correctly with the tree geometry.</p>
+<p><img alt="Generate vertex cloud option" src="../images/generate_option.png" /></p>
+<h3 id="8-export-the-tree">8. Export the Tree</h3>
+<p>Open the Tiny Glade tree export menu and select the tree export pipeline.</p>
+<p>Assign the appropriate objects for:</p>
+<ul>
+<li>trunk</li>
+<li>canopy</li>
+<li><code>appear_pos</code></li>
+<li><code>prim_center</code></li>
+</ul>
+<p>Then export the JSON mesh.</p>
+<h3 id="9-add-the-tree-to-the-game">9. Add the Tree to the Game</h3>
+<p>The exported tree mesh can be placed in the appropriate <code>/decorators</code> location and named according to the expected tree variants, for example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>branchy_tree_v1
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>branchy_tree_v2
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>branchy_tree_v3
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section describes the built-in JSON tree asset workflow. If the official modding system gains dedicated support for adding new tree assets, follow the developer documentation for that workflow instead.</p>
+</div>
+<h3 id="10-test-in-tiny-glade">10. Test in Tiny Glade</h3>
+<p>Start Tiny Glade and check that the tree loads correctly in-game.</p>
+<p>If the game fails during loading, review the exported attributes and verify that the trunk, canopy, UV data, and helper clouds were exported correctly.</p>
 <p><img alt="🌳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f333.svg" title=":deciduous_tree:" /> Enjoy making your own trees!</p>
 
 
