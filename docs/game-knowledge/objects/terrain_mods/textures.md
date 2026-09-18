@@ -19,7 +19,8 @@ terrain_summer.png
 terrain_winter.png
 ```
 
-If your terrain also requires a different appearance for **Olden**, create the corresponding texture for that glade as well.
+!!! Note
+    There is no Olden Glade terrain texture.
 
 You can create and edit these textures using any image-editing or 3D-painting software you prefer. For example, Blender can be useful for painting directly against the terrain UV layout, while programs such as Procreate, Krita, Photoshop, or similar tools can be used to refine the final image.
 

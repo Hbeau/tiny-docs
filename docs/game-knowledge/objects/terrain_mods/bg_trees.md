@@ -872,7 +872,7 @@ The script performs three main operations:
 
 1. Trees that still sit over valid terrain are snapped vertically onto the new terrain surface.
 2. Trees that would now be below `MIN_TREE_Z`, such as trees that have ended up in an ocean area, are redistributed to random valid positions on the terrain while respecting `MIN_TREE_SPACING`.
-3. The final positions are converted back into Tiny Glade coordinates and written directly into the original tree JSON file. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
+3. The final positions are converted back into Tiny Glade coordinates and written directly into the original tree JSON file.
 
 ## 6. Check the Result in Blender
 

@@ -1,6 +1,6 @@
 # Editing the Terrain Rocks
 
-Tiny Glade's terrain rocks are stored as a separate mesh:
+Tiny Glade's terrain rocks are stored as a separate [mesh](../../meshes.md):
 
 ```text
 assets/meshes/terrain_rocks.json

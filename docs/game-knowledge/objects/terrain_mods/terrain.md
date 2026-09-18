@@ -2,7 +2,7 @@
 
 Terrain mods in Tiny Glade currently work by replacing the game's existing terrain assets.
 
-This tutorial covers the basic workflow for creating a custom terrain mesh, water geometry, seasonal textures, trees, plants, rocks, and other terrain-bound assets and preparing them for use in-game.
+This tutorial covers the basic workflow for creating a custom terrain [mesh](../../meshes.md), water geometry, seasonal textures, trees, plants, rocks, and other terrain-bound assets and preparing them for use in-game.
 
 ## The Terrain Mesh
 
