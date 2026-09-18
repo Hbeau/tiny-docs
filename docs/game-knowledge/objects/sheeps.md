@@ -1,69 +1,71 @@
 # Sheep
 
-Sheep are the most iconic and adorable creatures in *Tiny Glade*. They wander peacefully around your buildings and love being petted.  
-Under the hood, their behavior and animation system are implemented in a very unique way.
+*By Rapunzilla*
 
-![Sheep](./two_sheep_in_a_meadow.jpg)
+Sheep are some of the most iconic creatures in *Tiny Glade*. They wander around your builds and can be petted by the player.
 
----
+Under the hood, their animation system works in an unusual way compared with a conventional skeletal animation setup.
+
+![Sheep](./images/two_sheep_in_a_meadow.jpg)
 
 ## Meshes
 
-The sheep's 3D models (meshes) are located in the `meshes/sheep_animation` folder. There are **31 separate mesh files** used for animations:
+The sheep meshes are located in the `meshes/sheep_animation` folder.
 
-- **30** files for the **walking animation**, named `1.json` through `30.json`
-- **1** file for the **petting animation**, named `delighted.json`
+There are **31 mesh files** used by the animation system:
 
-!!! info  
-    The `1.json` mesh is also used for the **idle** animation.
+- **30** files for the walking animation, named `1.json` through `30.json`
+- **1** file for the petting animation, named `delighted.json`
 
-Each mesh file contains a standard set of [meshes attributes](../meshes.md):  
-- `Vertex_Position`: the 3D coordinates of each vertex  
-- `Vertex_Normal`: the direction each vertex is facing 
-- `Vertex_Color`: the color of each vertex
+!!! info
 
----
+    The `1.json` mesh is also used for the **idle** state.
+
+Each mesh file contains the standard [mesh attributes](../meshes.md), including:
+
+- `Vertex_Position` — the 3D coordinates of each vertex
+- `Vertex_Normal` — the normal direction of each vertex
+- `Vertex_Color` — the colour associated with each vertex
 
 ## Animation
 
-The sheep animation system works by **switching between mesh frames**:
+The sheep animation system works by **switching between mesh frames**.
 
-- **Idle state**: The sheep remains on the `1.json` mesh.
-- **Walking state**: The sheep cycles through the 30 walking frames (`1.json` to `30.json`) in a loop, creating the illusion of movement.
-- **Petting state**: When the player pets a sheep, its mesh switches to `delighted.json`, showing a happy reaction.
+- **Idle state** — the sheep remains on the `1.json` mesh.
+- **Walking state** — the sheep cycles through the 30 walking frames, from `1.json` to `30.json`, creating the appearance of movement.
+- **Petting state** — when the player pets a sheep, the mesh switches to `delighted.json`.
 
-the original animation last 30 frame but you don't have to make yours last that long, you can loop through your frames to create a shorter one. **but it require the 30 files to work properly** if not, the game crash at startup.
+The original walking animation uses 30 frames, but a custom animation does not need to contain 30 unique poses. Shorter animations can repeat frames to fill the sequence.
 
-### 🔧 Technical Constraints
+However, **all 30 numbered files must still be present**. If one or more expected files are missing, the game may crash during startup.
 
-For the animation to work properly, all meshes must meet **strict structural requirements**:
+### Technical Constraints
 
-- They must have **the exact same number of vertices**.
-- The vertices must be listed **in the same order across all meshes**.
+For the animation to work correctly, all animation meshes must meet several structural requirements:
 
-This is crucial because the animation system interpolates between vertex positions over time. If the vertex count or order differs between frames, the animation will break or cause visual artifacts.  
+- They must contain **the same number of vertices**.
+- Vertices must appear **in the same order across every frame**.
 
-![wrong_vertex_order](./wrong_vertex_order.JPG)  
+This is important because the animation system interpolates between corresponding vertex positions over time. If the vertex count or ordering differs between frames, the animation may break or produce visual artefacts.
 
-if the number of vertex is not even between models you will get the following error :  
-```
+![Incorrect vertex ordering](./images/wrong_vertex_order.JPG)
+
+If the vertex count differs between animation meshes, the game may produce an error similar to:
+
+```text
 ERROR [tiny_glade::panic_reporter] [frame:0] PANIC: panicked at crates/country-core/src/startup/startup_sheep.rs:98:21:
 index out of bounds: the len is 860 but the index is 860
 ```
 
-where the `860` is the length of your shortest mesh
+In this example, `860` corresponds to the vertex count of the shorter mesh.
 
-!!! danger 
-    If you're exporting or modifying sheep meshes in Blender:
-    Make sure the export script does **not reorder the vertex list**.  
+!!! danger
 
+    When exporting or modifying sheep meshes in Blender, make sure the export process does **not reorder the vertex list**.
 
-
----
+    Even if two frames contain the same number of vertices, changing their order can cause incorrect interpolation between frames.
 
 ### Version Notes
 
-- **Versions ≤ 1.13**: Each mesh must contain **exactly 860 vertices**.  
-- **Version ≥ 1.14**: This limitation has been lifted. Meshes can have any vertex count, as long as it's consistent across all animation frames.
-
-
+- **Versions ≤ 1.13** — each sheep mesh must contain **exactly 860 vertices**.
+- **Versions ≥ 1.14** — the fixed 860-vertex requirement has been removed. Meshes can use a different vertex count as long as that count is consistent across all animation frames.

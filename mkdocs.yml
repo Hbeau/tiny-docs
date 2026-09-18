@@ -1,5 +1,5 @@
 site_name: Tiny Docs
-site_description: The Knowledge base for Tiny modders
+site_description: The knowledge base for Tiny Modders
 theme:
   name: material
   palette:
@@ -13,8 +13,21 @@ nav:
     - Assets Structure: game-knowledge/game-structure.md
     - Meshes Rendering: game-knowledge/meshes.md
     - Objects :
-      - Sheeps: game-knowledge/objects/sheeps.md
+      - Sheep: game-knowledge/objects/sheeps.md
       - Trees: game-knowledge/objects/trees.md
+      - Windows: mgame-knowledge/objects/windows.md
+      - Garden Brush: game-knowledge/objects/garden-brush.md
+      - Ducks: game-knowledge/objects/ducks.md
+      - Roofs: game-knowledge/objects/roofs.md
+      - Clutter: game-knowledge/objects/clutter.md
+      - Flags: game-knowledge/objects/flags.md
+      - Terrain:
+        - Terrain Mesh: game-knowledge/objects/terrain_mods/terrain.md
+        - Terrain Water Plane: game-knowledge/objects/terrain_mods/water_plane.md
+        - Terrain Trees: game-knowledge/objects/terrain_mods/bg_trees.md
+        - Terrain Plants: game-knowledge/objects/terrain_mods/plants.md
+        - Terrain Rocks: game-knowledge/objects/terrain_mods/rocks.md
+        - Terrain Textures: game-knowledge/objects/terrain_mods/textures.md
     - Savegames: game-knowledge/save.md
     - Starter Builds: game-knowledge/starterbuilds.md
   - Modding Tools:

@@ -1,110 +1,189 @@
-# How to edit game Assets
+# Modding and Asset Replacement
 
-Tiny Glade includes many [assets](../game-knowledge/game-structure.md) and **Compiled assets (Aka Textures)** that you can modify to change the look and feel of your game.  
-**Asset packs** are collections of these modified files gather in an zip file, letting you customize things like:  
-- Decorations and clutter  
-- Entities (sheep, ducks, etc.)  
-- Trees  
-- Seasonal settings  
-- Banners
+*By Rapunzilla*
 
-Asset packs **replace existing game files** and are loaded when the game starts.
+Tiny Glade now includes **official mod support**, with workflows centred around the in-game mod menu and the **Steam Workshop**.
 
----
+For most players, this is the recommended way to install and use mods.
 
-# Installation Methods
+See the official [Tiny Glade modding guide](https://pouncelight.games/tiny-glade/info/modding/) for the latest information about the supported modding system.
 
-There are **two ways** to install custom assets:  
-- **Manual installation**  
-- **Automatic installation** (using Whiterun)
+!!! info "Legacy asset packs"
 
-## Manual Installation
+    Before official mod support was introduced, many Tiny Glade mods were distributed as asset packs that directly replaced files in the game's installation directory.
 
-1. **Extract** the new asset pack (usually a ZIP file).
-2. **Copy** the new `assets` folder into your game directory, replacing existing files if prompted.
-3. **Start the game** and enjoy your new content!
+    These older asset packs, including packs created for **Whiterun**, are still useful and can often be used with the new modding system. However, direct game-file patching is no longer required for most mods.
 
-!!! danger
-    **Modding is fun but risky!**  
-    - Always **back up your saves** before experimenting.  
-    - If the game asks to send a crash report, say **no** to avoid annoying the dev teams (but you can share logs on Discord’s #modding channel, click on details, open `log.txt` and scroll to the bottom).  
-    ![crash report](./crash-report.jpg){: style="height:400px;display:block;margin:auto"}
-    - The manifest is reset after every game update, so check it regularly!
+## Installing Mods
 
----
+### Steam Workshop
 
-## Automatic Installation
+The easiest way to install supported mods is through the **Steam Workshop**.
 
-![Whiterun application](./Whiterun.jpg)
-You can use the **Whiterun** tool to automate the process:
+Subscribe to a mod from the Workshop and Tiny Glade will make it available in-game.
 
-1. **Download Whiterun** from [GitHub](https://github.com/Hbeau/Whiterun/releases/tag/V1.2)  
-   *(Requires [Java 24](https://adoptium.net/temurin/releases/?version=24) to run)*
-2. **Open Whiterun** by double-clicking on the `jar` file (make sure you launch it with the right version of java)
-3. **Patch your game**  
- The game should be automaticly located and the path is shown in the text field. verify the path or edit it with the **Browse...** button  
-_The path should lead to something like :   
-`C:\program Files (x86)\Steam\SteamLibrary\steamapps\common\Tiny Glade\`_
-![whiterun-config](Whiterun-config.jpg)
-Then click on the **Patch Game** button to patch the game
-3. Click **"Add asset pack"** to open the folder where asset packs are stored. You can download packs from the [Reddit community](https://www.reddit.com/r/TinyGladeMods/) or the Discord **#Mods-list** channel.
-4. The pack should appear in Whiterun automatically.  
-   Click on it, then click **"Install"**.  
-   ![install-pack](install.jpg)
-5. **Start the game** and enjoy!
+Modded clutter becomes available automatically in the clutter picker. Other types of mods may need to be enabled for an individual glade through:
 
-# Creating a New Asset Pack
+`Escape → MODS → GLADE MODS`
 
-To **create your own asset pack**, follow these steps:
+For complete instructions, see the official [Tiny Glade modding guide](https://pouncelight.games/tiny-glade/info/modding/).
 
-1. **Set up your pack folder**  
-   - Create an **empty directory** for your pack.
-   - Inside this folder, **replicate the structure** of the original game files for any assets you want to modify.
-     - *Example:* To edit the anvil clutter, place your modified file at `assets/meshes/clutter/anvil.json`.
-     - *For compiled assets:* To change the flag texture, place your file at `compiled-assets/textures/flag_patterns.texture`.
+## Installing Local Mods
 
-2. **Add a manifest file**  
-   - At the **root of your pack folder**, create a file named `manifest.json` to describe your pack.
-   - Example manifest:
-     ```json
-     {
-       "name": "My very own assets",
-       "description": "Change things that look very cool!",
-       "authors": ["Name 1", "Name 2"]
-     }
-     ```
-   - **This file is required** for your pack to be recognized by the game or Whiterun.
+Tiny Glade can also load mods directly from a local `mods` folder.
 
-3. **Include a thumbnail**  
-   - Add a **128x128 JPG image** named `thumbnail.jpg` at the root of your pack folder.
-   - This image will represent your pack in mod managers.
+On Windows, the default location is:
 
-4. **Package your pack**  
-   - **Zip the entire folder** (including all files, manifest, and thumbnail).
-   - Your asset pack is now ready to share or install!
+```text
+%USERPROFILE%\Saved Games\Tiny Glade\Steam\YOUR_STEAM_ID\mods
+```
 
-> **Tip:**  
-> If you want to skip creating the manifest and zipping manually, you can use the **Whiterun** tool’s built-in pack creation form for a streamlined process.
+Each folder or `.zip` file placed directly inside this directory is treated as a separate mod.
 
+!!! tip "Using older Whiterun packs"
 
----
+    Existing zipped mods made for **Whiterun** can be placed directly into the `mods` folder.
 
-## Recovering from Problems
+    They no longer need to patch files inside the Tiny Glade installation directory.
 
-If you want to **restore the default game** or if something breaks.  
-1. go one the Tiny Glade steam page in your library  
-2. click on the cog at the right and in the dropdown menu click on properties  
-![properties](./steam_properties.jpg){: style="height:300px;display:block;margin:auto"}  
-3. On the pop-up go to "installed files" menu and click on "verify integrity"
-![verify integrity](./verify_integity.jpg){: style="height:300px;display:block;margin:auto"}
+    Asset-replacement mods must still be enabled for a glade through the in-game **Mods** menu.
 
----
+## Legacy Asset Replacement
+
+Before official mod support was added, Tiny Glade mods commonly worked by replacing files inside the game's `assets` or `compiled-assets` directories.
+
+Asset packs could modify things such as:
+
+- decorations and clutter
+- entities such as sheep and ducks
+- trees
+- seasonal settings
+- banners
+- textures and other compiled assets
+
+These methods are still relevant when working with older mods or when investigating Tiny Glade's internal assets, but they should now be considered a **legacy modding workflow**.
+
+!!! warning
+
+    Directly modifying files in the Tiny Glade installation directory is more fragile than using the official mod system.
+
+    Game updates may overwrite modified files, and invalid replacements can prevent the game from loading correctly.
+
+## Whiterun
+
+![Whiterun application](./images/Whiterun.jpg)
+
+**Whiterun** is a community-created modding application by Hbeau that was widely used before Tiny Glade gained official mod support.
+
+It automated several parts of the older asset-replacement workflow, including patching the game and managing asset packs.
+
+Whiterun can still be useful for:
+
+- working with older asset packs
+- understanding legacy Tiny Glade mods
+- managing packs created specifically for the Whiterun format
+
+However, for installing modern Tiny Glade mods, the official mod system and Steam Workshop should generally be used instead.
+
+### Installing Whiterun
+
+1. Download Whiterun from the [GitHub releases page](https://github.com/Hbeau/Whiterun/releases/tag/V1.2).
+
+    Whiterun requires [Java 24](https://adoptium.net/temurin/releases/?version=24).
+
+2. Open Whiterun by launching the `.jar` file with Java.
+
+3. Verify the Tiny Glade installation path.
+
+    It will usually resemble:
+
+    ```text
+    C:\Program Files (x86)\Steam\steamapps\common\Tiny Glade\
+    ```
+
+    ![Whiterun configuration](./images/Whiterun-config.jpg)
+
+4. Follow Whiterun's interface to manage legacy asset packs.
+
+!!! note
+
+    Older instructions may tell you to use Whiterun's **Patch Game** function and directly modify the Tiny Glade installation.
+
+    This is no longer necessary for many legacy mods. The official Tiny Glade mod loader can recognise compatible zipped mods placed in the `mods` folder.
+
+## Creating a Legacy Asset Pack
+
+The following format describes the older asset-pack system used before official mod support.
+
+For new mods, particularly new clutter items, use Tiny Glade's official modding workflow instead.
+
+### 1. Create the Pack Folder
+
+Create an empty directory for the pack.
+
+Inside it, reproduce the directory structure of the game files you intend to replace.
+
+For example:
+
+```text
+assets/meshes/clutter/anvil.json
+```
+
+or:
+
+```text
+compiled-assets/textures/flag_patterns.texture
+```
+
+### 2. Add a Manifest
+
+At the root of the pack, create a `manifest.json` file describing the pack.
+
+For example:
+
+```json
+{
+    "name": "My very own assets",
+    "description": "Change things that look very cool!",
+    "authors": ["Name 1", "Name 2"]
+}
+```
+
+### 3. Add a Thumbnail
+
+Add a thumbnail image at the root of the pack if required by the tool or distribution format you are using.
+
+Older Whiterun packs commonly use:
+
+```text
+thumbnail.jpg
+```
+
+### 4. Package the Mod
+
+Zip the pack directory when distributing it.
+
+!!! note
+
+    Modern Tiny Glade mods use a different structure. For example, official clutter mods use `.glb` files and are created through Tiny Glade's built-in mod editor.
+
+## Troubleshooting
+
+If direct asset replacement causes problems, Steam can restore the original Tiny Glade files.
+
+1. Open **Tiny Glade** in your Steam library.
+2. Click the **gear icon** and select **Properties**.
+
+    ![Steam properties](./images/steam_properties.jpg)
+
+3. Open **Installed Files** and select **Verify integrity of game files**.
+
+    ![Verify integrity](./images/verify_integity.jpg)
+
+Steam will restore missing or modified game files.
 
 ## Need Help?
 
-- Join the **Tiny Glade Discord** (accessible inside the game) for help and sharing mods.
-- You can find mods in the [Reddit community](https://www.reddit.com/r/TinyGladeMods/).
-
----
-
-*Happy tinkering!*
+- See the official [Tiny Glade modding guide](https://pouncelight.games/tiny-glade/info/modding/).
+- Join the Tiny Glade Discord through the link available in-game.
+- Community mods and older asset packs can also be found through the [Tiny Glade Mods subreddit](https://www.reddit.com/r/TinyGladeMods/).

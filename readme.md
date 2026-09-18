@@ -1,73 +1,113 @@
-# ✨Tiny Docs✨
+# ✨ Tiny Docs ✨
 
-[Tiny Docs](https://hbeau.github.io/tiny-docs/) is a community-driven knowledge base and documentation site for modding **Tiny Glade**.  
-It covers game structure, asset formats, modding tools, and troubleshooting tips to help modders customize their game.
+*By Rapunzilla*
 
-## What is Tiny Glade?🏰
+[Tiny Docs](https://hbeau.github.io/tiny-docs/) is a community-driven knowledge base and documentation site for modding **Tiny Glade**.
 
-[Tiny Glade](https://store.steampowered.com/app/2198150/Tiny_Glade/) is a cozy diorama builder developed in Rust using the Bevy engine.  
-While there is no official mod support, the community has discovered ways to modify assets and share custom content.
+It covers game structure, asset formats, modding tools, official mod support, legacy asset replacement, and troubleshooting to help modders understand and customise the game.
 
-## Project Structure📁
+## What Is Tiny Glade? 🏰
 
-- **docs/**: All documentation pages (Markdown)
-- **site/**: Generated static site (do not edit directly)
-- **mkdocs.yml**: Site configuration
+[Tiny Glade](https://store.steampowered.com/app/2198150/Tiny_Glade/) is a cosy diorama builder developed in Rust using the Bevy game engine.
 
-## How to Contribute🤝
+Tiny Glade now includes **official mod support**, including Steam Workshop integration and support for adding custom clutter items. The community also continues to document older and more advanced asset-replacement workflows.
 
-We welcome contributions from anyone interested in modding Tiny Glade!
+For information about the official modding system, see the [Tiny Glade modding guide](https://pouncelight.games/tiny-glade/info/modding/).
+
+## Project Structure 📁
+
+- **`docs/`** — all documentation pages written in Markdown
+- **`site/`** — generated static site output; do not edit this folder directly
+- **`mkdocs.yml`** — MkDocs site configuration
+
+## How to Contribute 🤝
+
+Contributions are welcome from anyone interested in Tiny Glade modding, documentation, reverse engineering, or community tools.
 
 ### Prerequisites
 
-To preview your changes locally, you need Python and pip installed:
+To preview your changes locally, you will need Python and `pip`.
 
-- **Windows:**  
-  Download and install [Python](https://www.python.org/downloads/windows/).  
-  Make sure to check "Add Python to PATH" during installation.
+#### Windows
 
-- **Verify installation:**  
-  Open Command Prompt and run:
-  ```
-  python --version
-  pip --version
-  ```
+Download and install [Python](https://www.python.org/downloads/windows/).
 
-### Steps
+During installation, make sure **Add Python to PATH** is enabled.
 
-1. **Fork this repository** and clone it locally.
-2. **Edit or add Markdown files** in the `docs/` folder.
-   - Follow the style and structure of existing pages.
-   - Add images to the appropriate subfolder.
-3. **Install MkDocs and plugins:**  
-   - Install [MkDocs Material](https://squidfunk.github.io/mkdocs-material/getting-started/):
-     ```
-     pip install mkdocs-material
-     ```
-   - Install extra plugins:
-     ```
-     pip install mkdocs-autorefs
-     ```
-4. **Preview your changes** locally:
-   - Run the local server:
-     ```
-     mkdocs serve
-     ```
-   - Visit `http://localhost:8000` in your browser.
-5. **Submit a pull request** with a clear description of your changes.
+To verify the installation, open Command Prompt or a terminal and run:
 
-## Contribution Guidelines📚
+```text
+python --version
+pip --version
+```
+
+### Contribution Steps
+
+1. **Fork the repository** and clone your fork locally.
+
+2. **Create a new branch** for your changes.
+
+    For example:
+
+    ```text
+    docs/update-modding-guide
+    ```
+
+3. **Edit or add Markdown files** in the `docs/` folder.
+
+    - Follow the style and structure of existing pages.
+    - Add images to the appropriate `images` subfolder.
+    - Keep links and file paths relative where appropriate.
+    - Preview any MkDocs-specific formatting such as admonitions before submitting.
+
+4. **Install MkDocs and the required plugins.**
+
+    Install [MkDocs Material](https://squidfunk.github.io/mkdocs-material/getting-started/):
+
+    ```text
+    pip install mkdocs-material
+    ```
+
+    Install the additional plugin used by the project:
+
+    ```text
+    pip install mkdocs-autorefs
+    ```
+
+5. **Preview your changes locally.**
+
+    From the repository root, run:
+
+    ```text
+    mkdocs serve
+    ```
+
+    Then open:
+
+    ```text
+    http://localhost:8000
+    ```
+
+    in your browser.
+
+6. **Commit and push your changes** to your fork.
+
+7. **Submit a pull request** with a clear description of what you changed and why.
+
+## Contribution Guidelines 📚
 
 - Keep documentation clear and beginner-friendly.
-- Use screenshots and code snippets where helpful.
-- Document new discoveries or troubleshooting steps.
+- Use screenshots, examples, and code snippets where they improve understanding.
+- Document new discoveries and troubleshooting steps clearly.
+- Distinguish between **official mod support** and **legacy asset-replacement methods** where relevant.
+- Avoid presenting uncertain or reverse-engineered behaviour as confirmed fact.
 - Respect copyright and only share original or permitted content.
-- Don't put the discord invite link into the doc.
+- Do not add the Tiny Glade Discord invite link directly to the documentation.
 
-## Community🌱
+## Community 🌱
 
-- Join the **Tiny Glade Discord** for modding help and discussion.
-- Share mods and guides on [Reddit](https://www.reddit.com/r/TinyGladeMods/).
+- Join the **Tiny Glade Discord** through the official links provided by the game or developers for modding help and discussion.
+- Share mods and guides on the [Tiny Glade Mods subreddit](https://www.reddit.com/r/TinyGladeMods/).
 
 ---
 

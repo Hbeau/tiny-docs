@@ -1,6 +1,9 @@
 # Windows
 
+*By Rapunzilla*
+
 There are 3 main kinds of windows, each with several variants:
+
 - **Arrow Slit**: small square hole in the wall
 - **Cottage Window**: square window in a rustic style
 - **Gothic Window**: pointed arch window
@@ -9,20 +12,15 @@ Each type comes in 3 sizes and can be placed in a **building**, a **wall**, or a
 Each window has simple, dormer, and half-dormer versions, which are considered different kinds of windows.
 
 Each window is made up of several meshes that define its appearance and behavior in the environment. Not all windows use these meshes in the same way:
+
 - The **collision mesh** defines a bounding box around the window. This is used to prevent overlapping. For **cottage windows only**, the collision mesh also creates a square hole in the wall. For other window types, the hole in the wall is hardcoded and cannot be modified.
 
 Below are side-by-side images showing the collision results for different window types:
-<div style="display: flex; justify-content: space-evenly;" markdown="span">
-    ![Cottage Collision](cottage_window_collision_result.png){ width="200" }  
-    ![Arrow Slit Collision](arrow_slit_collision_result.png){ width="200" }  
-    ![Gothic Collision](gothic_window_collision_result.png){ width="200" }  
+<div style="display: flex; justify-content: space-evenly; gap: 1rem;">
+    <img src="./images/cottage_window_collision_result.png" alt="Cottage Collision" width="200">
+    <img src="./images/arrow_slit_collision_result.png" alt="Arrow Slit Collision" width="200">
+    <img src="./images/gothic_window_collision_result.png" alt="Gothic Collision" width="200">
 </div>
-
-
-
-
- 
-
 
 ---
 

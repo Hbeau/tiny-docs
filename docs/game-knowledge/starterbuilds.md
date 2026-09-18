@@ -1,34 +1,42 @@
 # Starter Builds
 
-## What are starter builds?
+*By Rapunzilla*
 
-When you create a new glade, the game will load up a randomly choosen premade build to help you get into the game faster with some inspiration to go off of and because it looks better then just starting with something completely empty.
+## What Are Starter Builds?
 
-All starter builds are normal savegames. So you can undo and redo them just as any regular Build. 
+When you create a new glade, Tiny Glade loads one of several premade builds at random. These provide a little inspiration and give you something to start from instead of an entirely empty glade.
 
-!!! tipp
-    For explanation how Saves in general work, please read up the devs own [savegame documentation](https://pouncelight.games/tiny-glade/troubleshooting/saves/)
+Starter builds are stored as normal Tiny Glade savegames. Once loaded, they can be edited, undone, and redone just like any other build.
 
-## Where do i find them?
+!!! tip
 
-Alls starter builds can be found in **`...Steam\steamapps\common\Tiny Glade\assets\starting-builds`**
+    For more information about how Tiny Glade saves work, see the developers' [savegame documentation](https://pouncelight.games/tiny-glade/troubleshooting/saves/).
 
-## Can i change them?
+## Where Are Starter Builds Stored?
 
-Yes.
+Starter builds can be found in:
 
-Since they are normal savegames you can freely:
+```text
+...\Steam\steamapps\common\Tiny Glade\assets\starting-builds
+```
 
-- add your own
+The exact location of your Steam library may vary.
 
-- replace the ones that exist
+## Can I Change Them?
 
-The Saves here are not bound by the naming convention of the usual saves.
+Yes. Because starter builds use the normal savegame format, you can:
 
-You can delete all saves except one, then all your glades will start with this one glade.
+- add your own starter builds
+- replace existing starter builds
+- remove starter builds you do not want to use
 
-You can use any glade you want. Your own savegames or downloaded savegames.
+Starter builds do not need to follow the same naming convention as ordinary Tiny Glade saves.
 
-!!! tipp
-    I advise to keep the naming convention of the starting builds f.e. "01 [NAME]" so when the game updates and re-downloads all default saves, you know which is added by yourself
+If only one starter build remains in the folder, newly created glades will use that build every time.
 
+You can use your own glades as starter builds, as well as compatible savegames obtained from other players.
+
+!!! tip
+    Consider using a naming convention, for example `01 [NAME]`, for any starter builds you add yourself.
+
+    This makes it easier to distinguish your custom builds from the default starter builds if a game update restores or adds files to this folder.
