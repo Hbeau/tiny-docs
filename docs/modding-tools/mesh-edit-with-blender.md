@@ -146,11 +146,11 @@ By default, the export tool can split edges automatically. If you need to do thi
 <div style="display:flex; gap:1rem;" markdown="1">
 
 <figure markdown="span">
-  ![Mesh without edge splitting](./images/exemple_no_edge_split.JPG){ width="320" }
+  ![Mesh without edge splitting](../images/exemple_no_edge_split.JPG){ width="320" }
 </figure>
 
 <figure markdown="span">
-  ![Mesh with edge splitting](./images/exemple_edge_split.JPG){ width="320" }
+  ![Mesh with edge splitting](../images/exemple_edge_split.JPG){ width="320" }
 </figure>
 
 </div>
@@ -251,11 +251,11 @@ assertion failed: values.array_length() as i32 > max_index
 
 ### 2. N-gons
 
-<img src="./images/ngons_render.jpg" alt="N-gon rendering example" width="320" style="float:right; margin:0 0 1rem 1rem;">
+<img src="../images/ngons_render.jpg" alt="N-gon rendering example" width="320" style="float:right; margin:0 0 1rem 1rem;">
 
 N-gons are faces with more than four sides. They can appear when modelling operations such as bevels are used or when objects such as cylinders are created.
 
-Leaving N-gons in a mesh can produce unpredictable triangulation and may cause rendering problems in-game.
+Leaving N-gons in a mesh can produce unpredictable triangulation and may cause rendering problems in-game. even in other meshes that are not directly affected by the N-gon.
 
 To find N-gons:
 
