@@ -15,7 +15,7 @@ nav:
     - Objects :
       - Sheep: game-knowledge/objects/sheeps.md
       - Trees: game-knowledge/objects/trees.md
-      - Terrain: game-knowledge/objects/terrain.md
+      - Terrain: game-knowledge/objects/terrain_mods/terrain.md
       - Windows: mgame-knowledge/objects/windows.md
       - Garden Brush: game-knowledge/objects/garden-brush.md
       - Ducks: game-knowledge/objects/ducks.md
