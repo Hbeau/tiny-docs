@@ -1,5 +1,7 @@
 # Mesh Rendering
 
+*By Rapunzilla*
+
 In **Tiny Glade**, meshes are the **3D models** that make up many built-in assets in the game, including decorations, clutter, plants, trees, stones, and other objects.
 
 Exceptions include buildings, roofs, and some other objects that are generated procedurally.

@@ -1,5 +1,7 @@
 # Savegames
 
+*By Rapunzilla*
+
 ## Information About Game Saves
 
 Information about how Tiny Glade savegames work, when the game saves, what data is stored, and where save files are located can be found in the [Developer Guide](https://pouncelight.games/tiny-glade/troubleshooting/saves/).

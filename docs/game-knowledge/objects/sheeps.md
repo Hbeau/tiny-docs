@@ -1,5 +1,7 @@
 # Sheep
 
+*By Rapunzilla*
+
 Sheep are some of the most iconic creatures in *Tiny Glade*. They wander around your builds and can be petted by the player.
 
 Under the hood, their animation system works in an unusual way compared with a conventional skeletal animation setup.

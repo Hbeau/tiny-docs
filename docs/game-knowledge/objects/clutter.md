@@ -1,5 +1,7 @@
 # Clutter Mods
 
+*By Rampion*
+
 Tiny Glade's official modding support allows players to add new **clutter objects** to the game using `.glb` files.
 
 These mods are created and managed through Tiny Glade's built-in modding tools and can be shared through the **Steam Workshop**.

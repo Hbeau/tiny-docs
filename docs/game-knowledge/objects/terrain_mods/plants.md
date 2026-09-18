@@ -1,5 +1,7 @@
 # Editing the Plants
 
+*By Rampion*
+
 Plant placement can be updated using the same Blender workflow described in [Editing the Trees](bg_trees.md).
 
 In the **Summer** and **Flowery** glade folders, a `plants` folder is located alongside the `trees` folder. The relevant files are:

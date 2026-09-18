@@ -1,5 +1,7 @@
 # Trees in Tiny Glade
 
+*By Rapunzilla*
+
 Trees in Tiny Glade are not ordinary 3D objects. They use their own loading rules and shaders so they can behave correctly across the different seasons.
 
 This page explains how the tree system works, how tree meshes are stored, and how to create your own using the Tiny Glade Blender Add-On.

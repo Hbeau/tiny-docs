@@ -1,5 +1,7 @@
 # ✨ Tiny Docs ✨
 
+*By Rapunzilla*
+
 [Tiny Docs](https://hbeau.github.io/tiny-docs/) is a community-driven knowledge base and documentation site for modding **Tiny Glade**.
 
 It covers game structure, asset formats, modding tools, official mod support, legacy asset replacement, and troubleshooting to help modders understand and customise the game.

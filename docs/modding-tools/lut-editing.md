@@ -1,5 +1,7 @@
 # Editing LUTs
 
+*By Rapunzilla*
+
 ## What Are LUTs?
 
 <figure markdown="span">

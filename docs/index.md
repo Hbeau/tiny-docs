@@ -1,5 +1,7 @@
 # Welcome to Tiny Glade Modding Documentation
 
+*By Rapunzilla*
+
 Tiny Glade is a cosy diorama builder where you can create whimsical castles, cottages, ruins, and landscapes using a flexible, gridless building system.
 
 There are no management systems, combat mechanics, or objectives. The focus is entirely on building, experimenting, and creating detailed scenes.

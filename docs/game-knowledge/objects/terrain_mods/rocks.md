@@ -1,5 +1,7 @@
 # Editing the Terrain Rocks
 
+*By Rampion*
+
 Tiny Glade's terrain rocks are stored as a separate [mesh](../../meshes.md):
 
 ```text

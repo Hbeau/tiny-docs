@@ -1,5 +1,7 @@
 # Sound Editing
 
+*By Private117*
+
 ## Introduction
 
 After discussing sound editing with the game and audio developers, we learned that directly editing Tiny Glade's audio with [FMOD](https://www.fmod.com/) would require the original FMOD project, which is not publicly available.

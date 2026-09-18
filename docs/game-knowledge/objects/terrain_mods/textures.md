@@ -1,5 +1,7 @@
 # Creating Seasonal Terrain Textures
 
+*By Rampion*
+
 The final step is to create terrain textures for each glade season.
 
 Tiny Glade uses different terrain textures depending on the selected glade style, so a complete terrain mod should provide matching textures for the relevant seasons.

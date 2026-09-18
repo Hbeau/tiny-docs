@@ -1,5 +1,7 @@
 ## Replace the Water Plane
 
+*By Rampion*
+
 This step is only necessary if your custom terrain includes water **outside the glade**, such as an ocean, lake, or river.
 
 Tiny Glade's water [mesh](../../meshes.md) is stored in the same folder as `terrain.json`:

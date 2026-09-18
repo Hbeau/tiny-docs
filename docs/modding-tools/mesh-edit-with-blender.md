@@ -1,5 +1,7 @@
 # Mesh Editing with the Blender Add-On
 
+*By Rapunzilla*
+
 The **Tiny Glade Blender Add-On** lets you import and export [Tiny Glade's built-in JSON mesh files](../game-knowledge/meshes.md) for editing in [Blender](https://www.blender.org/).
 
 !!! info "Official clutter modding"

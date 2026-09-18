@@ -1,5 +1,7 @@
 # Game Structure
 
+*By Rapunzilla*
+
 ## How It Works
 
 Tiny Glade is developed in **Rust** using the [Bevy Engine](https://bevyengine.org/).

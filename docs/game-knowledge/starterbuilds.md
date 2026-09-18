@@ -1,5 +1,7 @@
 # Starter Builds
 
+*By Rapunzilla*
+
 ## What Are Starter Builds?
 
 When you create a new glade, Tiny Glade loads one of several premade builds at random. These provide a little inspiration and give you something to start from instead of an entirely empty glade.

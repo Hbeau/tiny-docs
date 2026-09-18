@@ -1,5 +1,7 @@
 # Modding and Asset Replacement
 
+*By Rapunzilla*
+
 Tiny Glade now includes **official mod support**, with workflows centred around the in-game mod menu and the **Steam Workshop**.
 
 For most players, this is the recommended way to install and use mods.

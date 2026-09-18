@@ -1,5 +1,7 @@
 # Editing the Trees
 
+*By Rampion*
+
 Custom terrain changes the height and shape of the landscape, but Tiny Glade's tree-placement files are still positioned for the original terrain.
 
 If these files are left unchanged, trees may float above the ground, clip into hills, appear underwater, or otherwise sit incorrectly on the new terrain.
