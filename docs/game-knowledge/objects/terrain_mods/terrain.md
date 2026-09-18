@@ -19,10 +19,11 @@ Tiny Glade/assets/meshes/terrain.json
 Import `terrain.json` into Blender and make sure to check the normals! Sometimes normals can be imported swapped. Check normals by:
 
 1. Clicking `Overlays` in the viewport display
-![Overlays](./images/face_orientation.jpg)
+![Overlays](./images/face_orientation.jpg){ .center }
 
 2. If the mesh looks red that means its inside out and it won't render properly. Swap the normals by tabbing into Edit Mode, pressing `A` to select all verticies, and then `Shift + N` to swap the normals. The `inside` box at the bottom should remain unchecked, and the mesh should no longer be red.
-![Normals Button](./images/normals_button.JPG)
+
+   ![Normals Button](./images/normals_button.JPG){ style="display: block; margin-left: auto; margin-right: auto;" }
 
 !!! warning
 

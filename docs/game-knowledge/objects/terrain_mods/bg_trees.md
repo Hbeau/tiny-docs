@@ -195,9 +195,7 @@ TreePoints
 
 These markers represent the original Tiny Glade tree positions.
 
-![TreePoints Collection](./images/TreePoints_collection.JPG)
-
-![Tree Markers](./images/tree_point.JPG)
+![TreePoints Collection](./images/TreePoints_collection.JPG){ width="48%" } ![Tree Markers](./images/tree_point.JPG){ width="48%" }
 
 !!! warning "Delete the TreePoints collection before importing another file"
 
