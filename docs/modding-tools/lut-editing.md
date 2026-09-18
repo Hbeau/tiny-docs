@@ -2,8 +2,8 @@
 
 ## What Are LUTs?
 
-<figure style="width: 500px;">
-  <img src="./images/filters.jpg" alt="Filters and LUTs in Tiny Glade Photo Mode" width="500">
+<figure markdown="span">
+  ![Filters and LUTs in Tiny Glade Photo Mode](./images/filters.jpg){ width="500" }
   <figcaption>Filters and LUTs in Tiny Glade's Photo Mode.</figcaption>
 </figure>
 
@@ -43,8 +43,8 @@ Take a screenshot of the glade you want to use as a colour-grading reference.
 
 For this example, the goal is to create a black-and-white, Japanese samurai-film-inspired look with only the red tones remaining visible.
 
-<figure style="width: 800px;">
-  <img src="./images/eastern glade before.jpg" alt="Eastern Glade before colour grading" width="800">
+<figure markdown="span">
+  ![Eastern Glade before colour grading](./images/eastern glade before.jpg){ width="800" }
   <figcaption>Eastern Glade mod by Rapunzilla before colour grading.</figcaption>
 </figure>
 
@@ -54,22 +54,22 @@ Open DaVinci Resolve and switch to the **Color** tab.
 
 Drag your Tiny Glade screenshot into DaVinci Resolve.
 
-<figure style="width: 800px;">
-  <img src="./images/1before.jpg" alt="Screenshot imported into DaVinci Resolve" width="800">
+<figure markdown="span">
+  ![Screenshot imported into DaVinci Resolve](./images/1before.jpg)
 </figure>
 
 Right-click the screenshot and select **Create New Timeline Using Selected Clip**.
 
-<figure style="width: 800px;">
-  <img src="./images/2timeline.jpg" alt="Creating a new timeline in DaVinci Resolve" width="800">
+<figure markdown="span">
+  ![Creating a new timeline in DaVinci Resolve](./images/2timeline.jpg)
 </figure>
 
 ### 4. Adjust the Colour Grade
 
 The main colour-grading controls can be found in the Color workspace.
 
-<figure style="width: 800px;">
-  <img src="./images/3tools.jpg" alt="DaVinci Resolve colour grading tools" width="800">
+<figure markdown="span">
+  ![DaVinci Resolve colour grading tools](./images/3tools.jpg){ width="800" }
 </figure>
 
 You can experiment with these controls until the image has the appearance you want.
@@ -82,8 +82,8 @@ To add a node:
 2. Select **Add Node → Add Serial** or the appropriate corrector option.
 3. Connect the node into the existing node chain.
 
-<figure style="width: 800px;">
-  <img src="./images/3.5node.jpg" alt="Adding a colour correction node in DaVinci Resolve" width="800">
+<figure markdown="span">
+  ![Adding a colour correction node in DaVinci Resolve](./images/3.5node.jpg){ width="800" }
 </figure>
 
 !!! info
@@ -94,15 +94,15 @@ To add a node:
 
 Edit the node or nodes until the image looks the way you want.
 
-<figure style="width: 800px;">
-  <img src="./images/4node.jpg" alt="Editing a colour correction node" width="800">
+<figure markdown="span">
+  ![Editing a colour correction node](./images/4node.jpg){ width="800" }
   <figcaption>For demonstration, the curve has been raised to make the image brighter.</figcaption>
 </figure>
 
 For this example, the final grade was created using a single node.
 
-<figure style="width: 800px;">
-  <img src="./images/5done.jpg" alt="Completed colour grade in DaVinci Resolve" width="800">
+<figure markdown="span">
+  ![Completed colour grade in DaVinci Resolve](./images/5done.jpg){ width="800" }
 </figure>
 
 ### 5. Export the LUT
@@ -113,8 +113,8 @@ Export the LUT as a **33-point `.cube` file** into Tiny Glade's `luts` folder.
 
 A 33-point LUT provides sufficient resolution for this type of in-game colour transformation.
 
-<figure style="width: 800px;">
-  <img src="./images/6generate.jpg" alt="Generating a LUT in DaVinci Resolve" width="800">
+<figure markdown="span">
+  ![Generating a LUT in DaVinci Resolve](./images/6generate.jpg){ width="800" }
 </figure>
 
 ### 6. Test the LUT in Tiny Glade
@@ -123,14 +123,14 @@ Start Tiny Glade and open Photo Mode.
 
 Your new LUT should appear in the LUT or filter selector.
 
-<figure style="width: 800px;">
-  <img src="./images/7LUT.jpg" alt="Custom LUT visible in Tiny Glade" width="800">
+<figure markdown="span">
+  ![Custom LUT visible in Tiny Glade](./images/7LUT.jpg){ width="800" }
 </figure>
 
 The LUT can then be applied to the current scene.
 
-<figure style="width: 800px;">
-  <img src="./images/easternafter.jpg" alt="Eastern Glade with the custom LUT applied" width="800">
+<figure markdown="span">
+  ![Eastern Glade with the custom LUT applied](./images/easternafter.jpg){ width="800" }
   <figcaption>Final appearance using the custom LUT and the Eastern Glade mod.</figcaption>
 </figure>
 

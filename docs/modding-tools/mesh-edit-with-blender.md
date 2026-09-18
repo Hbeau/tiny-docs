@@ -141,13 +141,16 @@ By default, the export tool can split edges automatically. If you need to do thi
 - **Option 1 — Edge Split modifier:** In **Object Mode**, add an **Edge Split** modifier, configure the desired sharp edges or angle threshold, and apply it.
 - **Option 2 — Mark Sharp:** In **Edit Mode**, select the relevant edges and use **Edge → Mark Sharp**. Configure the mesh's smoothing settings as appropriate for your version of Blender.
 
-<div style="display:flex; gap:1rem;">
-  <figure style="margin:0;">
-    <img src="./images/exemple_no_edge_split.JPG" alt="Mesh without edge splitting" style="max-width:320px; height:auto; display:block;">
-  </figure>
-  <figure style="margin:0;">
-    <img src="./images/exemple_edge_split.JPG" alt="Mesh with edge splitting" style="max-width:320px; height:auto; display:block;">
-  </figure>
+<div style="display:flex; gap:1rem;" markdown="1">
+
+<figure markdown="span">
+  ![Mesh without edge splitting](./images/exemple_no_edge_split.JPG){ width="320" }
+</figure>
+
+<figure markdown="span">
+  ![Mesh with edge splitting](./images/exemple_edge_split.JPG){ width="320" }
+</figure>
+
 </div>
 
 <p style="text-align:center; font-style:italic; margin-top:0.5rem; font-size:0.7rem;">
@@ -196,7 +199,7 @@ If you run into problems after importing or exporting JSON meshes, the following
 
 ### 1. Game Crashes at Startup
 
-<img src="./images/crash.jpg" alt="Tiny Glade crash window" style="height:360px; display:block; margin:auto;">
+![Tiny Glade crash window](./images/crash.jpg){ height="360" }
 
 If Tiny Glade crashes, a log file is generated under:
 
