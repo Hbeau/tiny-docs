@@ -15,14 +15,13 @@ nav:
     - Objects :
       - Sheep: game-knowledge/objects/sheeps.md
       - Trees: game-knowledge/objects/trees.md
-      - Terrain: game-knowledge/objects/terrain_mods/terrain.md
       - Windows: mgame-knowledge/objects/windows.md
       - Garden Brush: game-knowledge/objects/garden-brush.md
       - Ducks: game-knowledge/objects/ducks.md
       - Roofs: game-knowledge/objects/roofs.md
       - Clutter: game-knowledge/objects/clutter.md
       - Flags: game-knowledge/objects/flags.md
-      - Textures:
+      - Terrain:
         - Terrain Mesh: game-knowledge/objects/terrain_mods/terrain.md
         - Terrain Water Plane: game-knowledge/objects/terrain_mods/water_plane.md
         - Terrain Trees: game-knowledge/objects/terrain_mods/bg_trees.md
