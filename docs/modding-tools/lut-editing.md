@@ -1,6 +1,6 @@
 # Editing LUTs
 
-*By Rapunzilla*
+*By Private117*
 
 ## What Are LUTs?
 
